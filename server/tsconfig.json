@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "forceConsistentCasingInFileNames": true,
+        "importHelpers": true,
+        "strict": true,
+        "resolveJsonModule": true,
+        "baseUrl": "./",
+        "target": "es2018",
+        "types": ["reflect-metadata", "@types/mocha", "mocha", "node"],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "out",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "strictNullChecks": true,
+        "paths": {
+            "@app/*": ["./app/*"],
+            "@common/*": ["../common/*"]
+        }
+    }
+}

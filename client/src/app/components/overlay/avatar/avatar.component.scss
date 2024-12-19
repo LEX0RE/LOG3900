@@ -1,0 +1,107 @@
+#screen {
+    position: absolute;
+    background-color: var(--greying-screen-color);
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.avatar-container {
+    position: absolute;
+    top: 17vh;
+    width: 125vh;
+    height: 65vh;
+    z-index: 10;
+    border: 4px solid var(--overlay-border-color);
+    border-radius: 20px;
+    background-color: var(--overlay-background-color);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.close-Avatar {
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+    border-radius: 10px;
+    width: 15vh;
+    height: 8vh;
+    border: 3px solid var(--button-border);
+    font-size: 3.5vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 2vh;
+    margin-bottom: 2vh;
+}
+
+.close-Avatar:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.chosen-avatar-container {
+    margin-top: 3.5vh;
+    margin-left: 5vh;
+}
+
+.chosen-avatar {
+    width: 35vh;
+    height: 35vh;
+}
+
+#image-input {
+    margin-top: 5vh;
+}
+
+.default-avatar {
+    width: 20vh;
+    height: 20vh;
+    margin: 1vh;
+    margin-top: 3.5vh;
+}
+
+.selected {
+    border: 0.6vh solid rgb(167, 3, 3);
+}
+
+.default-avatar:hover {
+    cursor: pointer;
+    transition: ease-out 0.3s;
+    border: 0.6vh solid rgb(204, 64, 64);
+}
+
+p {
+    color: var(--title-color);
+    font-weight: bold;
+    font-family: var(--title-font);
+    font-size: 4.5vh;
+    float: left;
+    position: absolute;
+    bottom: 1vh;
+    left: 30vh;
+}
+
+.error-image {
+    font-size: 2vh;
+    color: var(--input-error-border-color);
+    font-weight: bold;
+    font-family: var(--title-font);
+}
+
+.error-input-image {
+    font-size: 2vh;
+    color: var(--input-error-border-color);
+    font-weight: bold;
+    font-family: var(--title-font);
+    position: absolute;
+    bottom: 10vh;
+    left: 5vh;
+}

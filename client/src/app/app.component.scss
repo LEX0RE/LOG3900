@@ -1,0 +1,76 @@
+#container-error-message {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20vh;
+    width: 60vh;
+    text-align: center;
+    border: 0.4vh solid black;
+    background-color: var(--background-color);
+    border-radius: 3vh;
+}
+
+#message {
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 4vh;
+    color: var(--title-color);
+    text-shadow: 0vh -0.01vh black, 0.01vh 0vh black, 0vh 0.01vh black, -0.01vh 0vh black;
+    margin-top: 6.8vh;
+}
+
+#screen {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 13;
+    background-color: var(--greying-screen-color);
+}
+
+#chat-button {
+    position: absolute;
+    font-size: 4vh;
+    color: var(--button-font-color);
+    border-radius: 5vh;
+    border-color: var(--button-border);
+    background-color: var(--button-color);
+    top: 2%;
+    left: 3%;
+    height: 8vh;
+    width: 8vh;
+    z-index: 12;
+}
+
+#logout-button {
+    position: absolute;
+    font-size: 3.8vh;
+    color: var(--button-font-color);
+    border-radius: 1vh;
+    border-color: var(--button-border);
+    background-color: var(--button-color);
+    top: 2vh;
+    right: 15vh;
+    height: 8vh;
+    width: 30vh;
+    z-index: 14;
+}
+
+button:hover {
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+#chat-button[disabled] {
+    background-color: var(--button-color-disabled);
+    cursor: default;
+}

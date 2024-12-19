@@ -1,0 +1,53 @@
+import 'package:Scrabble/data/models/classes/joinable_game_slot.dart';
+
+final List<JoinableGameSlot> Function() FAKE_JOINABLE_GAMES = () => [
+      const JoinableGameSlot(
+          creator: 'Elizabeth',
+          turnTime: '1min00',
+          dictionary: 'Français',
+          nRealPlayers: 2,
+          nVirtualPlayers: 0,
+          nObservers: 4),
+      const JoinableGameSlot(
+          creator: 'Julie',
+          turnTime: '2min00',
+          dictionary: 'Anglais',
+          nRealPlayers: 1,
+          nVirtualPlayers: 2,
+          nObservers: 0),
+      const JoinableGameSlot(
+          creator: 'Safa',
+          turnTime: '1min30',
+          dictionary: 'Français',
+          nRealPlayers: 3,
+          nVirtualPlayers: 0,
+          nObservers: 23),
+      const JoinableGameSlot(
+          creator: 'Nicolas',
+          turnTime: '1min30',
+          dictionary: 'Français',
+          nRealPlayers: 3,
+          nVirtualPlayers: 0,
+          nObservers: 3),
+      const JoinableGameSlot(
+          creator: 'James',
+          turnTime: '1min30',
+          dictionary: 'Français',
+          nRealPlayers: 3,
+          nVirtualPlayers: 0,
+          nObservers: 23),
+      const JoinableGameSlot(
+          creator: 'Alexandre',
+          turnTime: '1min30',
+          dictionary: 'Français',
+          nRealPlayers: 3,
+          nVirtualPlayers: 0,
+          nObservers: 23),
+      const JoinableGameSlot(
+          creator: 'WWWWWWWWWW',
+          turnTime: '1min30',
+          dictionary: 'Français',
+          nRealPlayers: 3,
+          nVirtualPlayers: 0,
+          nObservers: 23),
+    ];

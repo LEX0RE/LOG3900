@@ -1,0 +1,24 @@
+<div id="screen">
+    <div class="avatar-container">
+        <div class="chosen-avatar-container">
+            <div>
+                <img src="{{ authenticationService.chosenAvatar }}" alt="avatar" class="chosen-avatar" />
+            </div>
+            <input id="image-input" #imageInput type="file" accept="image/png, image/jpeg" (change)="processFile(imageInput)" />
+        </div>
+        <img
+            src="{{ file.path }}"
+            alt="default-avatar"
+            *ngFor="let file of defaultPicture; let i = index"
+            class="default-avatar"
+            [class.selected]="file.isSelected"
+            (click)="selectImage(file.path, i)"
+        />
+        <p *ngIf="errorImage" class="error-input-image" p>
+            {{translationsContainer.get('errorSubmittingImage')}}
+        </p>
+        <p>{{translationsContainer.get('selectYourAvatar')}}</p>
+        <p *ngIf="authenticationService.errorImage" class="error-image" p>{{translationsContainer.get('errorSubmittingAvatar')}}</p>
+        <button class="close-Avatar" (click)="closeAvatarOverlay()">{{translationsContainer.get('close')}}</button>
+    </div>
+</div>

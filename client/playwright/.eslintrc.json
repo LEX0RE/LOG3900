@@ -1,0 +1,19 @@
+{
+    "root": false,
+    "overrides": [
+        {
+            "files": ["*.ts"],
+            "extends": ["plugin:playwright/playwright-test"],
+            "rules": {
+                "playwright/no-condition-in-test": "none",
+                "playwright/missing-playwright-await": "error",
+                "playwright/no-focused-test": "error",
+                "playwright/no-page-pause": "warn",
+                "playwright/no-skipped-test": "warn",
+                "playwright/no-useless-not": "error",
+                "playwright/no-wait-for-timeout": "error",
+                "playwright/require-top-level-describe": "warn"
+            }
+        }
+    ]
+}

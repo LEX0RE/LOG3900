@@ -1,0 +1,108 @@
+#screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: var(--greying-screen-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay {
+    border: 0.8vh solid var(--button-border);
+    background-color: var(--background-color);
+    border-radius: 2vh;
+    width: 65vh;
+    height: 40vh;
+    z-index: 11;
+}
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.8vh;
+    margin-bottom: 4vh;
+    font-style: bold;
+    font-size: 6vh;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: var(--title-color);
+    text-shadow: 0vh -0.01vh var(--shadow-color), 0.01vh 0vh var(--shadow-color), 0vh 0.01vh var(--shadow-color), -0.01vh 0vh var(--shadow-color);
+}
+
+h1,
+h2,
+label {
+    align-items: center;
+    text-align: center;
+    color: var(--title-color);
+    font-weight: bold;
+    font-family: var(--title-font);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    font-size: 4vh;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+input,
+select {
+    width: 30vh;
+    height: 5vh;
+    border-radius: 7px;
+    font-size: medium;
+    margin-bottom: 4.5vh;
+}
+
+
+button {
+    margin-top: 20px;
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+    border-radius: 10px;
+    width: 35vh;
+    height: 10vh;
+    border: 3px solid var(--button-border);
+    font-size: 3.5vh;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+button:disabled,
+button[disabled] {
+    border-color: var(--button-disabled-border-color);
+    background-color: var(--button-disabled-color);
+    color: var(--button-disabled-font-color);
+    cursor: default;
+}
+
+input.ng-touched.ng-invalid {
+    border: 2px solid var(--input-error-border-color);
+}
+
+.invalid {
+    font-size: 2.5vh;
+    color: var(--input-error-border-color);
+    font-weight: bold;
+    font-family: var(--title-font);
+    margin-top: -1vh;
+}

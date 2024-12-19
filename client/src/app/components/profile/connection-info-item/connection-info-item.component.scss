@@ -1,0 +1,56 @@
+.horizontalContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.item {
+    border-bottom: 0.3vh solid var(--table-border-color);
+    margin: 0;
+    padding: 1vh;
+    width: 100%;
+    height: 5vh;
+    white-space: normal;
+    word-wrap: normal;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+img {
+    width: 5vh;
+    height: 5vh;
+    margin-right: 1vh;
+}
+
+.replay-button {
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+    height: 100%;
+    width: 100%;
+}
+
+button:hover,
+.replay-button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+button {
+    background-color: var(--button-color);
+    border: 0.3vh solid var(--button-border);
+    font-size: 3vh;
+    color: var(--button-font-color);
+    border-radius: 4vh;
+    width: 20vh;
+    margin-top: 15vh;
+}
+
+button[disabled] {
+    border-color: var(--button-disabled-border-color);
+    background-color: var(--button-disabled-color);
+}

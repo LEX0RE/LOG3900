@@ -1,0 +1,17 @@
+<h3 id="title-friend-list">
+    {{ translationsContainer.get('friendList') }}
+    <h3>
+        <div id="friend-list">
+            <div class="friend" *ngFor="let friend of friends">
+                <div class="choice">
+                    <img src="assets/images/invite.png" (click)="inviteFriend(friend.id)" />
+                </div>
+                <div>
+                    <img class="image" src="{{ friend.profilePicture }}" />
+                </div>
+                <div class="name">{{ friend.name }}</div>
+            </div>
+        </div>
+        <div id="error">{{ isPlayerNotAvailable ? translationsContainer.get('notAvailable') : '' }}</div>
+    </h3>
+</h3>

@@ -1,0 +1,141 @@
+#screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: var(--greying-screen-color);
+}
+
+#overlay {
+    border: 0.8vh solid var(--button-border);
+    background-color: var(--background-color);
+    border-radius: 2vh;
+    position: absolute;
+    width: 65vh;
+    height: 25vh;
+    margin: auto;
+    margin-right: 72.9vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+}
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.8vh;
+    margin-bottom: 4vh;
+    font-family: Inknut Antiqua;
+    font-style: bold;
+    font-size: 6vh;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: var(--title-color);
+    text-shadow: 0vh -0.01vh var(--shadow-color), 0.01vh 0vh var(--shadow-color), 0vh 0.01vh var(--shadow-color), -0.01vh 0vh var(--shadow-color);
+}
+
+.pulse-container {
+    margin-top: 6vh;
+    margin-right: 3vh;
+    margin-left: 3vh;
+    margin-bottom: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 5vh;
+}
+
+/**
+ * Source : https://codepen.io/nzbin/pen/GGrXbp 
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
+
+.dot-pulse {
+    position: relative;
+    left: -9999px;
+    width: 4vh;
+    height: 4vh;
+    border-radius: 5vh;
+    background-color: var(--title-color);
+    color: var(--title-color);
+    box-shadow: 9999px 0 0 -5vh var(--title-color);
+    animation: dotPulse 1.5s infinite linear;
+    animation-delay: 0.25s;
+}
+
+.dot-pulse::before,
+.dot-pulse::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 4vh;
+    height: 4vh;
+    border-radius: 5vh;
+    background-color: var(--title-color);
+    color: var(--title-color);
+}
+
+.dot-pulse::before {
+    box-shadow: 10vh 0 0 -5px var(--title-color);
+    animation: dotPulseBefore 1.5s infinite linear;
+    animation-delay: 0s;
+    right: 7vh;
+}
+
+.dot-pulse::after {
+    box-shadow: 10014px 0 0 -5px var(--title-color);
+    animation: dotPulseAfter 1.5s infinite linear;
+    animation-delay: 0.5s;
+    left: 7vh;
+}
+
+@keyframes dotPulseBefore {
+    0% {
+        box-shadow: 9984px 0 0 -5px var(--title-color);
+    }
+    30% {
+        box-shadow: 9984px 0 0 2px var(--title-color);
+    }
+    60%,
+    100% {
+        box-shadow: 9984px 0 0 -5px var(--title-color);
+    }
+}
+
+@keyframes dotPulse {
+    0% {
+        box-shadow: 9999px 0 0 -5px var(--title-color);
+    }
+    30% {
+        box-shadow: 9999px 0 0 2px var(--title-color);
+    }
+    60%,
+    100% {
+        box-shadow: 9999px 0 0 -5px var(--title-color);
+    }
+}
+
+@keyframes dotPulseAfter {
+    0% {
+        box-shadow: 10014px 0 0 -5px var(--title-color);
+    }
+    30% {
+        box-shadow: 10014px 0 0 2px var(--title-color);
+    }
+    60%,
+    100% {
+        box-shadow: 10014px 0 0 -5px var(--title-color);
+    }
+}

@@ -1,0 +1,18 @@
+<div id="channelJoined" *ngIf="chatBoxInteractionService.isChatJoined">
+    <div class="channel" *ngFor="let chat of chatBoxInteractionService.chatJoinedName">
+        <button class="channel" (click)="joinedChat(chat)">
+            <div class="channelName">{{ chat.name }}</div>
+        </button>
+        <button class="quitChannel" *ngIf="!isDefaultChat(chat.id) && !isGameChat(chat.creator.id)" (click)="quitChat(chat)">x</button>
+    </div>
+
+    <div class="channel" *ngIf="needNewChannel">
+        <input class="channel" (keyup.enter)="onEnter($event)" [(ngModel)]="chatToSend" />
+        <button class="quitChannel" (click)="cancelNewChat()">x</button>
+    </div>
+
+    <button class="addChannel" *ngIf="!needNewChannel" (click)="createChannel()">+</button>
+    <button class="addChannel" (click)="goToSearchChat()">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </button>
+</div>

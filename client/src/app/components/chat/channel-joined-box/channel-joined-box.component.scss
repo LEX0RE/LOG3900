@@ -1,0 +1,60 @@
+button {
+    cursor: pointer;
+}
+input {
+    width: 80%;
+    text-align: center;
+}
+
+#channelJoined {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8vh;
+    align-items: center;
+    color: var(--message-font-color);
+}
+
+#channelJoined .channel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--input-background-color);
+    color: var(--channel-font-color);
+    width: 100%;
+    height: 4.3vh;
+    margin: 16px 0;
+    position: relative;
+}
+
+.addChannel {
+    font-size: 5vh;
+    background-color: transparent;
+    border-radius: 40%;
+    border: 0.5vh solid black;
+    margin: 1% 0;
+}
+.addChannel img {
+    max-width: 100%;
+}
+
+.quitChannel {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    border-radius: 2vh;
+}
+button:hover {
+    border: 3.5px solid black;
+}
+
+.channelName {
+    width: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.fa-search {
+    font-size: 70%;
+    margin: 4px 0px;
+}

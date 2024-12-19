@@ -1,0 +1,6 @@
+<div *ngIf="isEndGame && open" id="container">
+    <p>{{ translationsContainer.get('gameContinueText') }}</p>
+    <div class="positionButton">
+        <button (click)="close()" type="button">{{ translationsContainer.get('ok') }}</button>
+    </div>
+</div>

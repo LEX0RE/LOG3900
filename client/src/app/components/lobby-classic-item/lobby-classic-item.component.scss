@@ -1,0 +1,76 @@
+div {
+    height: 100%;
+    width: 100%;
+}
+
+#timer {
+    max-width: 7vh;
+    max-height: 7vh;
+}
+
+#join_icon {
+    width: auto;
+    height: 6vh;
+}
+
+#observe_icon {
+    width: 8.5vh;
+    height: auto;
+}
+
+.joinButton {
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+    height: 100%;
+    width: 100%;
+}
+
+.horizontalContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.column-item {
+    border: 0.1vh solid var(--table-border-color);
+    margin: 0;
+    padding: 1vh;
+    width: 100%;
+    height: 5vh;
+    white-space: normal;
+    word-wrap: normal;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.parameter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.parameter > div {
+    height: auto;
+    width: auto;
+}
+
+.joinButton:hover,
+.observeButton:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.column-item.joinButton.noHover,
+.column-item.observeButton.noHover {
+    pointer-events: none;
+}

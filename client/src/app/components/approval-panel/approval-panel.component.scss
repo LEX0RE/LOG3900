@@ -1,0 +1,110 @@
+button {
+    background-color: var(--clearer-button-color);
+    border: 0.4vh solid var(--button-border);
+    color: var(--button-font-color);
+    border-radius: 0.8vh;
+    text-align: center;
+    width: 15vh;
+    height: 5vh;
+    font-size: 2vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+
+.main-container {
+    background-color: var(--table-color);
+    border: 0.5vh solid var(--table-border-color);
+    border-radius: 1vh;
+    height: 38vh;
+    width: 50vh;
+}
+
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.vertical-container {
+    flex: 1;
+}
+
+.response-button-container {
+    margin-top: -4vh;
+}
+
+.action-text {
+    margin-top: 1vh;
+    margin-bottom: -1vh;
+    font-weight: bold;
+    font-family: var(--font);
+    color: var(--title-color);
+}
+
+.action-command {
+    font-weight: normal;
+    font-family: var(--font);
+}
+
+.preview-button {
+    margin-top: 3vh;
+}
+
+button.approve-button {
+    background-color: var(--play-button-color);
+    border: 0.4vh solid var(--play-button-border-color);
+    border-radius: 0.8vh;
+}
+
+button.approve-button:enabled:hover {
+    background-color: var(--play-button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+button.reject-button {
+    background-color: var(--bad-button-color);
+    border: 0.4vh solid var(--hard-button-border-color);
+    border-radius: 0.8vh;
+}
+
+button.reject-button:enabled:hover {
+    background-color: var(--bad-button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.cancel-button {
+    background-color: var(--bad-button-color);
+    border: 0.4vh solid var(--hard-button-border-color);
+    border-radius: 0.8vh;
+}
+
+button.preview:enabled:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+button[disabled] {
+    background-color: var(--button-disabled-color);
+    border-color: var(--button-disabled-border-color);
+    color: var(--button-disabled-font-color);
+    cursor: default;
+}
+
+p {
+    margin-bottom: -1.5vh;
+}
+
+.column-title {
+    font-weight: bold;
+    font-family: var(--font);
+    color: var(--title-color);
+}
+
+div {
+    text-align: center;
+}

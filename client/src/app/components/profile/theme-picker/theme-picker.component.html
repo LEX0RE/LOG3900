@@ -1,0 +1,8 @@
+<div class="theme form-row">
+    <label>{{translationsContainer.get('chooseATheme')}} : </label>
+    <select name="themeType" [(ngModel)]="selectedTheme" (change)="changeTheme()">
+        <option value="Default" selected>{{translationsContainer.get('themeDefault')}}</option>
+        <option value="Dark">{{translationsContainer.get('themeDark')}}</option>
+        <option value="UnderTheSea">{{translationsContainer.get('themeUnderTheSea')}}</option>
+    </select>
+</div>

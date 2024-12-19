@@ -1,0 +1,70 @@
+#screen {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 12;
+    background-color: var(--greying-screen-color);
+}
+
+#container {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48vh;
+    width: 80vh;
+    text-align: center;
+    border: 0.4vh solid var(--overlay-border-color);
+    background-color: var(--overlay-background-color);
+    border-radius: 3vh;
+    z-index: 1;
+}
+
+p {
+    margin-top: 2vh;
+    margin-bottom: 1.8vh;
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 4vh;
+    color: var(--title-color);
+    text-shadow: 0vh -0.01vh var(--shadow-color), 0.01vh 0vh var(--shadow-color), 0vh 0.01vh var(--shadow-color), -0.01vh 0vh var(--shadow-color);
+}
+
+button:hover {
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+button {
+    display: inline;
+    font-size: 2vh;
+    color: var(--button-font-color);
+    border-radius: 2vh;
+    height: 4vh;
+    width: 12vh;
+    margin: 0.8vh 1.5vh 1.5vh 1.5vh;
+}
+
+.green {
+    background-color: var(--easy-button-color);
+    border: 0.3vh solid var(--easy-button-border-color);
+}
+.green:hover {
+    background-color: var(--easy-button-selected-color);
+}
+
+.red {
+    background-color: var(--hard-button-color);
+    border: 0.3vh solid var(--hard-button-border-color);
+}
+.red:hover {
+    background-color: var(--hard-button-selected-color);
+}

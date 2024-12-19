@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+<router-outlet></router-outlet>
+<button
+    id="chat-button"
+    class="fas fa-comment-alt"
+    (click)="swapChatShow()"
+    *ngIf="notOnAuthenticatePage()"
+    [disabled]="chatBoxInteractionService.isPortalShow"
+></button>
+<button id="logout-button" (click)="authenticationService.logout()" *ngIf="notOnAuthenticatePage()">{{ translationsContainer.get('logOut') }}</button>
+<app-chat-window></app-chat-window>
+<div id="screen" *ngIf="needReLogin()">
+    <div id="container-error-message">
+        <p id="message">{{ translationsContainer.get('serverNotResponding') }}</p>
+    </div>
+</div>

@@ -1,0 +1,2 @@
+export const MIN_NUMBER_OF_AVAILABLE_GAMES = 1;
+export const MAX_PLAYERS_CLASSIC_GAME = 4;

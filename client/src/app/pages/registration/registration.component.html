@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<div class="verticalContainer">
+    <h1>Scrabble</h1>
+    <div class="avatar">
+        <img src="{{ authenticationService.chosenAvatar }}" alt="avatar" class="avatarImg" />
+        <div class="editingBorder">
+            <button class="selectAvatar" (click)="openAvatarOverlay()"><i class="far fa-edit"></i></button>
+        </div>
+    </div>
+    <app-avatar *ngIf="statusAvatarOverlay()"></app-avatar>
+    <form [formGroup]="registerForm" class="verticalContainer" (ngSubmit)="onSubmit()">
+        <p *ngIf="userExist" class="userExist" p>{{ error }}</p>
+        <label for="username-input">{{translationsContainer.get('yourPlayerName')}} :</label>
+        <input id="username-input" type="text" formControlName="userName" />
+        <span *ngIf="registerForm.controls['userName'].errors" class="userExist"
+            >{{translationsContainer.get('writePlayerNameHint1')}} {{ minCharactersUserName }} {{translationsContainer.get('and')}}
+            {{ maxCharactersUserName }} {{translationsContainer.get('writePlayerNameHint2')}}</span
+        >
+        <label for="email-input">{{translationsContainer.get('yourEmail')}} :</label>
+        <input id="email-input" type="email" formControlName="email" />
+        <span *ngIf="registerForm.controls['email'].errors" class="userExist">
+            {{translationsContainer.get('emailHint1')}}{{ maxCharactersEmail }} {{translationsContainer.get('emailHint2')}}
+        </span>
+        <label for="password-input">{{translationsContainer.get('yourPassword')}} :</label>
+        <input id="password-input" type="password" type="password" formControlName="password" />
+        <span *ngIf="registerForm.controls['password'].errors" class="userExist">
+            {{translationsContainer.get('passwordHint1')}} {{ minCharactersPassword }} {{translationsContainer.get('and')}}
+            {{ maxCharactersPassword }} {{translationsContainer.get('passwordHint2')}}
+        </span>
+        <button id="registerButton" type="submit" [disabled]="!registerForm.valid">{{translationsContainer.get('playScrabble')}}</button>
+    </form>
+    <button class="returnButton" routerLink="/login">← {{translationsContainer.get('return')}}</button>
+</div>

@@ -1,0 +1,25 @@
+<div id="informativePanel">
+    <span *ngFor="let opponent of opponents">
+        <app-player-information [player]="opponent" [isObservationPage]="isObservationPage"></app-player-information>
+    </span>
+    <app-player-information [player]="player" [isObservationPage]="isObservationPage"></app-player-information>
+
+    <div>
+        <div class="space"></div>
+        <div id="division">
+            <div>
+                <p class="timer">{{ timer }}</p>
+                <img src="assets/images/clock.png" alt="clock" class="timer-img" style="z-index: -6" />
+            </div>
+            <p *ngIf="isImageTouched" id="information">{{ translationsContainer.get('stash') }}</p>
+
+            <img src="assets/images/bag.png" alt="bag" class="bag" />
+
+            <div>
+                <p class="remainingLetter">
+                    {{ remainingLetter }} {{ remainingLetter > 1 ? translationsContainer.get('letters') : translationsContainer.get('letter') }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

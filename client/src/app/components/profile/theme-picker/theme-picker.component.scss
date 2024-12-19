@@ -1,0 +1,47 @@
+.theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    text-align: right;
+}
+
+.form-row > select {
+    height: 50%;
+}
+
+.form-row > label {
+    white-space: nowrap;
+}
+div.form-row {
+    margin-left: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1;
+}
+
+label {
+    align-items: center;
+    text-align: center;
+    color: var(--title-color);
+    font-weight: bold;
+    font-family: var(--title-font);
+    font-size: 4vh;
+}
+
+button {
+    margin-left: 5px;
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+    border-radius: 10px;
+    border: 3px solid var(--button-border);
+    font-size: 2.3vh;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}

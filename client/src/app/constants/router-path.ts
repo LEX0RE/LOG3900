@@ -1,0 +1,10 @@
+export const LOGIN = '/login';
+export const REGISTER = '/registration';
+export const HOME = '/home';
+export const GAME = '/game';
+export const BRACKET = '/bracket';
+export const LOGIN_SIMPLE = 'login';
+export const LOBBY = '/lobby';
+export const HISTORY = '/history';
+export const CREATE_TOURNAMENT = '/createTournament';
+export const LOBBY_TOURNAMENT = '/lobbyTournament';

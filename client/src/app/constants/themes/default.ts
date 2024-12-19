@@ -1,0 +1,86 @@
+export const DEFAULT_STYLE = {
+    '--button-color': '#ba8f4d',
+    '--button-color-disabled': '#d1b994',
+    '--button-hover-color': '#876d44',
+    '--button-border': '#966720',
+    '--button-font-color': '#ffffff',
+    '--button-disabled-border-color': '#b6b2b2',
+    '--button-disabled-color': '#cccccc',
+    '--button-disabled-font-color': '#949393',
+    '--clearer-button-color': '#caa772',
+    '--clearer-button-hover-color': '#a5895c',
+    '--quit-button-color': '#ba614d',
+    '--quit-button-hover-color': '#814c40',
+    '--quit-button-border-color': '#000000',
+    '--arrow-button-color': '#000000',
+    '--arrow-button-border-color': '#000000',
+    '--easy-button-selected-color': '#43cc40',
+    '--easy-button-color': '#3bb539',
+    '--easy-button-border-color': '#0e8c0b',
+    '--hard-button-selected-color': '#ee6161',
+    '--hard-button-color': '#d25656',
+    '--hard-button-border-color': '#a81e1e',
+    '--bad-button-color': '#e00000',
+    '--bad-button-hover-color': '#a81212',
+    '--play-button-color': '#3fd258',
+    '--play-button-border-color': '#33a947',
+    '--play-button-hover-color': '#3ab04e',
+
+    '--overlay-background-color': '#dbcca8',
+    '--overlay-border-color': '#000000',
+    '--greying-screen-color': '#00000099',
+
+    '--tile-border': '#000000',
+    '--tile-color': '#734a0d',
+    '--tile-font-color': '#fffbf5',
+    '--tile-manipulated-border': '#ff0000',
+    '--tile-traded-border': '#008000',
+
+    '--title-color': '#6b3604',
+
+    '--shadow-color': '#000000',
+
+    '--table-font-color': '#ffffff',
+    '--table-color': '#ba8f4d',
+    '--table-border-color': '#966720',
+    '--scroll-bar-background-color': '#f0eadd',
+
+    '--input-placeholder-font-color': '#a8a8a8',
+    '--input-background-color': '#966720',
+    '--input-error-border-color': '#ff0000',
+    '--input-sending-button-hover-color': '#23dff8',
+    '--input-sending-button-color': '#00bcd4',
+    '--input-sending-button-border-color': '#006064',
+
+    '--message-font-color': '#ffffff',
+    '--client-message-color': '#7fd47d',
+    '--system-message-color': '#ffffff',
+    '--other-message-color': '#d7a351',
+    '--message-sender-font-color': '#740d0d',
+    '--message-time-font-color': '#09035f',
+    '--notification-color': '#ff0000',
+    '--team-font-color': '#800080',
+
+    '--seperator': '#4e3818',
+
+    '--tooltip-color': '#caa772',
+    '--tooltip-border-color': '#9e7d4c',
+    '--error-tooltip-border-color': '#680707',
+
+    '--turn-color': '#008000',
+    '--chat-background-color': '#b7a78e',
+    '--easel-border-color': '#000000',
+    '--easel-color': '#9e7d4c',
+
+    '--warning-font-color': '#e00000',
+    '--error-font-color': '#ff0000',
+
+    '--background-color': '#e3dac5',
+    '--general-font-color': '#000000',
+
+    '--game-item-border-color': '#835a1c',
+    '--game-item-info-color': '#000000',
+    '--waiting-dot-color': '#734a0d',
+
+    '--profile-background': '#eed08c',
+};

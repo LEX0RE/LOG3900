@@ -1,0 +1,125 @@
+button {
+    width: 28vh;
+    height: 8vh;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 5vh;
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+    font-family: var(--font);
+    font-size: 2.5vh;
+    border: 3px solid var(--button-border);
+}
+
+section {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.verticalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+h1 {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    font-family: var(--title-font);
+    font-style: bold;
+    font-size: 13vh;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: var(--title-color);
+    text-shadow: 0px -1px var(--shadow-color), 1px 0px var(--shadow-color), 0px 1px var(--shadow-color), -1px 0px var(--shadow-color);
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 1vh;
+    font-family: var(--title-font);
+    font-size: 4.5vh;
+    font-weight: bold;
+    color: var(--title-color);
+    text-shadow: 0px -1px var(--shadow-color), 1px 0px var(--shadow-color), 0px 1px var(--shadow-color), -1px 0px var(--shadow-color);
+}
+
+.footer-item {
+    display: block;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-item p {
+    color: var(--team-font-color);
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+app-letter {
+    position: absolute;
+    border-radius: 100vh;
+}
+#kLetter {
+    margin-top: 11vh;
+    margin-right: 100vh;
+    transform: rotate(-36.89deg);
+}
+
+#yLetter {
+    margin-top: 18vh;
+    margin-left: 75vh;
+    transform: rotate(40.61deg);
+}
+
+#eLetter {
+    margin-top: 40vh;
+    margin-right: 80vh;
+
+    transform: rotate(-36.89deg);
+}
+
+#aLetter {
+    margin-top: 50vh;
+    margin-right: 130vh;
+
+    transform: rotate(-36.89deg);
+}
+#blankLetter {
+    margin-left: 80vh;
+
+    margin-top: 45vh;
+    transform: rotate(40.61deg);
+}
+
+#bLetter {
+    margin-left: 100vh;
+
+    margin-top: 70vh;
+    transform: rotate(40.61deg);
+}
+
+#lLetter {
+    margin-top: 70vh;
+    margin-right: 85vh;
+
+    transform: rotate(-23.89deg);
+}
+
+#mLetter {
+    margin-left: 125vh;
+
+    margin-top: 55vh;
+
+    transform: rotate(40.61deg);
+}

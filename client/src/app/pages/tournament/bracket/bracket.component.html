@@ -1,0 +1,7 @@
+<div>
+    <h1>{{ translationsContainer.get('tournament') }}</h1>
+    <app-surrender-tournament></app-surrender-tournament>
+    <button *ngIf="isTournamentEnded()" (click)="leave()">{{ translationsContainer.get('quit') }}</button>
+    <app-bracket-tree *ngIf="brackets.length > 0" [brackets]="brackets"></app-bracket-tree>
+    <app-end-tournament-overlay></app-end-tournament-overlay>
+</div>

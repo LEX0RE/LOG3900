@@ -1,0 +1,25 @@
+# Build folder
+**/node_modules/
+**/out/
+**/out-tsc/
+**/tmp/
+**/build/
+
+# Docker unecessary file
+**/Dockerfile
+docker-compose.yml
+**/.dockerignore
+
+# Other
+**/static/
+**/coverage/
+**/.clinic
+**/*.clinic-flame.html
+**/*.clinic-flame/
+**/.nyc_output/
+**/false/
+**/.pub-cache/
+**/doc/api/
+**/.dart_tool/
+
+**/*.log

@@ -1,0 +1,22 @@
+<div id="container">
+    <div id="container-chat-box">
+        <div id="help-button" *ngIf="!isObservationPage">
+            <app-hint-button></app-hint-button>
+        </div>
+        <div id="chat-place-holder"></div>
+        <app-surrender *ngIf="!isObservationPage"></app-surrender>
+        <app-home-button *ngIf="!isObservationPage"></app-home-button>
+    </div>
+    <app-play-area tabindex="0" [isObservationPage]="isObservationPage"></app-play-area>
+
+    <div *ngIf="!isObservationPage; else isObservated">
+        <app-informative-panel [isObservationPage]="isObservationPage"></app-informative-panel>
+    </div>
+    <ng-template #isObservated>
+        <app-info-panel-observer [isObservationPage]="isObservationPage"></app-info-panel-observer>
+    </ng-template>
+    <app-game-continue></app-game-continue>
+    <app-winner-announcement></app-winner-announcement>
+    <app-game-loading></app-game-loading>
+    <app-blank-form-overlay></app-blank-form-overlay>
+</div>

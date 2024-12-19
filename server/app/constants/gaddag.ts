@@ -1,0 +1,4 @@
+export const GADDAG_MINIMUM_SIZE = 19683;
+export const GADDAG_TREE_DEPTH = 5;
+export const GARBAGE_COLLECT_INTERVAL = 400000;
+export const DICTIONARY_RESET_ASYNC = 20;

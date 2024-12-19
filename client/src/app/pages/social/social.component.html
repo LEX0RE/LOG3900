@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<h1>{{ translationsContainer.get('socialTitle') }}</h1>
+<div id="flex">
+    <div id="inputSearch">
+        <input
+            autofocus
+            maxlength="512"
+            type="text"
+            [placeholder]="translationsContainer.get('FindAPlayer')"
+            (focus)="openSearch()"
+            (focusout)="closeSearch()"
+            [(ngModel)]="player"
+            (ngModelChange)="searchUser($event)"
+        />
+        <div
+            id="user-list"
+            class="list"
+            *ngIf="isSearching"
+            (mouseenter)="onUserListHover(true)"
+            (mouseleave)="onUserListHover(false)"
+            (focusout)="closeSearch()"
+            tabindex="0"
+        >
+            <div class="item" *ngFor="let user of allUser">
+                <div class="choice">
+                    <div class="fa fa-plus" aria-hidden="true" (click)="sendRequest(user.id)"></div>
+                </div>
+                <div class="image">
+                    <img src="{{ user.profilePicture }}" />
+                </div>
+                <div class="name">{{ user.name }}</div>
+                <div class="options"><img (click)="addUserToBlock(user.id)" src="assets/images/block_button.png" /></div>
+            </div>
+        </div>
+    </div>
+    <div id="column">
+        <div class="column-width">
+            <h2>{{ translationsContainer.get('relationships') }}</h2>
+            <div class="verticalContainer">
+                <div class="gameDisplay">
+                    <div id="header">
+                        <div
+                            class="games-header"
+                            id="friend-tab"
+                            [attr.switchRelation]="switchRelation ? 'click' : 'not click'"
+                            (click)="switch(true)"
+                        >
+                            {{ translationsContainer.get('socialTitle') }}
+                        </div>
+                        <div
+                            class="games-header"
+                            id="block-tab"
+                            [attr.switchRelation]="!switchRelation ? 'click' : 'not click'"
+                            (click)="switch(false)"
+                        >
+                            {{ translationsContainer.get('blockedPlayers') }}
+                        </div>
+                    </div>
+                    <div class="list" id="friend-list" *ngIf="switchRelation">
+                        <div class="item" *ngFor="let friend of friends">
+                            <div style="text-align: left; align-content: center; flex: 1">
+                                <img class="image" src="{{ friend.profilePicture }}" />
+                            </div>
+                            <div class="name">{{ friend.name }}</div>
+                            <div class="choice">
+                                <img id="refuse-friend" src="assets/images/refuse_friend.png" (click)="removeFriend(friend.id)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list" id="block-list" *ngIf="!switchRelation">
+                        <div class="item" *ngFor="let user of userBlock">
+                            <div style="text-align: left; align-content: center; flex: 1">
+                                <img class="image" src="{{ user.profilePicture }}" />
+                            </div>
+                            <div class="name">{{ user.name }}</div>
+                            <div class="choice">
+                                <img src="assets/images/refuse_friend.png" (click)="removeFromBlock(user.id)" alt="remove-user-block" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column-width">
+            <h2>{{ translationsContainer.get('FriendRequests') }}</h2>
+            <div class="verticalContainer">
+                <div class="gameDisplay">
+                    <div class="list" id="friend-message-list">
+                        <div class="item" *ngFor="let newFriend of newFriends">
+                            <div class="image">
+                                <img src="{{ newFriend.profilePicture }}" />
+                            </div>
+                            <div class="name">{{ newFriend.name }}</div>
+                            <div class="choice">
+                                <img src="assets/images/accept_friend.png" (click)="acceptFriend(newFriend.id)" alt="accept-friend" />
+                                <img src="assets/images/refuse_friend.png" (click)="refuseFriend(newFriend.id)" alt="refuse-friend" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="returnButton" routerLink="/profile">{{ translationsContainer.get('return') }}</button>

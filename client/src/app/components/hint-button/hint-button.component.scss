@@ -1,0 +1,66 @@
+.bulb {
+    width: 6vh;
+    height: 6vh;
+    border-radius: 10vh;
+    cursor: pointer;
+    border: 0.3vh solid var(--button-border);
+}
+
+.bulb:hover {
+    background-color: var(--clearer-button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+p {
+    position: absolute;
+    background-color: var(--tooltip-color);
+    margin-top: -3.8vh;
+    border: 0.3vh solid var(--tooltip-border-color);
+    font-size: 2.3vh;
+    align-items: center;
+    margin-left: -0.4vh;
+
+    padding: 0.6vh;
+    color: var(--button-font-color);
+    border-radius: 1vh;
+}
+
+h4 {
+    margin-bottom: 3vh;
+}
+
+h5 {
+    font-size: 1.8vh;
+}
+
+#bulb-disabled {
+    background-color: var(--button-disabled-color);
+    border: 0.3vh solid var(--button-disabled-border-color);
+    color: var(--button-disabled-font-color);
+    cursor: default;
+}
+
+.bulb-enabled {
+    background-color: var(--clearer-button-color);
+}
+
+.hints-section {
+    background-color: var(--table-color);
+    border: 0.5vh solid var(--table-title-bottom-border-color);
+    border-radius: 1vh;
+    width: 45vh;
+    height: 42vh;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 5vh;
+    top: 10vh;
+    z-index: 2;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+app-hint-element.hint-element[isSelected='true'] {
+    background-color: var(--clearer-button-hover-color);
+}

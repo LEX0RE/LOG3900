@@ -1,0 +1,15 @@
+const String ROOT_PATH = '/';
+const String LOGIN_PATH = '/login';
+const String HOME_PATH = '/home';
+const String NEW_GAME_CONFIGURATION_PATH = '/new-game';
+const String JOINABLE_LOBBIES_PATH = '/joinable-lobbies';
+const String GAME_SCREEN_PATH = '/game';
+const String BRACKET_SCREEN_PATH = '/bracket';
+const String LOBBY_PATH = '/lobby';
+const String PROFILE_PATH = '/profile';
+const String FRIENDS_PATH = '/friends';
+const String PLAY_PATH = '/play';
+const String HISTORY_PATH = '/history';
+const String REPLAY_PATH = '/replay';
+const String OBSERVE_PATH = '/observe';
+const String STATISTICS_PATH = '/statistics';

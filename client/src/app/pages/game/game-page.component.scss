@@ -1,0 +1,46 @@
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    justify-content: space-around;
+    margin-left: 2vh;
+}
+#container-chat-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 2vh;
+    margin-left: 10vh;
+}
+
+#container-chat-box #help-button {
+    display: flex;
+    justify-content: space-around;
+}
+
+#container-chat-box #chat-place-holder {
+    align-items: flex-end;
+    width: 10vh;
+    height: 60vh;
+}
+#container-chat-box app-surrender,
+#container-chat-box app-home-button {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+app-informative-panel{
+    margin-right:4vh;
+    margin-top: 10vh;
+    margin-left: 4vh;
+    width: 48vh;
+}
+
+
+
+app-play-area {
+    width: min-content;
+    outline: none;
+}

@@ -1,0 +1,66 @@
+#invitations::-webkit-scrollbar {
+    width: 1.5vh;
+}
+
+#invitations::-webkit-scrollbar-track {
+    background: var(--scroll-bar-background-color);
+}
+
+#invitations::-webkit-scrollbar-thumb {
+    background: var(--button-border);
+    border-radius: 1vh;
+}
+
+.invitation-name {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--message-sender-font-color);
+    font-size: 2vh;
+}
+
+.invitation-name img {
+    max-height: 8vh;
+}
+
+.yes,
+.no {
+    cursor: pointer;
+    transition: ease-out 0.3s;
+    font-size: 1.5vh;
+}
+.yes {
+    background-color: var(--play-button-border-color);
+}
+.no {
+    background-color: var(--bad-button-hover-color);
+}
+
+button {
+    color: var(--button-font-color);
+    border-radius: 20px;
+    padding: 5px;
+    width: 35%;
+    cursor: pointer;
+    height: 3vh;
+}
+
+#invitations {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    max-height: 13vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.invitation {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 0.1vh var(--input-background-color);
+}
+
+.material-symbols-outlined {
+    font-size: 200%;
+}

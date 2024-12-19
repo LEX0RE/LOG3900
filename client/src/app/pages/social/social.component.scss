@@ -1,0 +1,245 @@
+h1,
+h2 {
+    color: var(--title-color);
+    text-shadow: 0vh -0.01vh var(--shadow-color), 0.01vh 0vh var(--shadow-color), 0vh 0.01vh var(--shadow-color), -0.01vh 0vh var(--shadow-color);
+    font-family: var(--title-font);
+    font-style: bold;
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 4vh;
+    font-size: 7.5vh;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    font-size: 4.5vh;
+}
+
+button {
+    margin-top: 20px;
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+    border-radius: 10px;
+    border: 3px solid var(--button-border);
+    font-size: 2.9vh;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.returnButton {
+    width: 20vh;
+    height: 9vh;
+    position: absolute;
+    bottom: 3vh;
+    left: 6vh;
+}
+
+#inputSearch {
+    display: flex;
+    width: 76%;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#invalid-server {
+    margin-top: 25vh;
+    text-align: center;
+    font-style: bold;
+    font-size: 3vh;
+}
+
+input {
+    height: 3vh;
+    border-radius: 2vh;
+    font-size: 1.6vh;
+    width: 100%;
+    font-family: var(--font);
+}
+
+#column {
+    display: flex;
+    width: 80%;
+}
+
+.column-width {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+#header {
+    display: flex;
+}
+
+.games-header {
+    justify-content: center;
+    width: 100%;
+    font-size: 3vh;
+    font-weight: bold;
+    border: 0.5vh solid var(--table-border-color);
+    border-radius: 2vh 2vh 0 0;
+}
+
+.games-header[switchRelation='click'] {
+    background-color: var(--table-color);
+}
+
+.games-header[switchRelation='not click'] {
+    background-color: var(--button-hover-color);
+}
+
+#header div {
+    display: flex;
+    cursor: pointer;
+}
+
+.verticalContainer {
+    width: 90%;
+    display: flex;
+    margin-top: -3vh;
+}
+
+.gameDisplay {
+    color: var(--table-font-color);
+    font-size: 2vh;
+    font-family: var(--title-font);
+    width: 100%;
+}
+
+.list {
+    border: 0.5vh solid var(--table-border-color);
+    background-color: var(--table-color);
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#friend-list,
+#block-list {
+    border-radius: 0 0 2vh 2vh;
+    height: 50vh;
+    align-items: center;
+}
+
+#user-list {
+    height: 23vh;
+    width: 100%;
+    border-radius: 2vh;
+    background-color: var(--table-color);
+    align-items: center;
+    position: absolute;
+    top: 100%;
+}
+
+#user-list .item {
+    width: 97%;
+}
+
+#user-list .item .choice {
+    flex: 1;
+}
+
+#user-list .item .image {
+    max-width: 5%;
+    margin-top: -1vh;
+}
+
+#user-list .item .image img {
+    max-width: 56%;
+    max-height: 4.2vh;
+    margin-left: -3vh;
+}
+
+#user-list .item .name {
+    text-align: start;
+    font-size: 3vh;
+    flex: 16;
+}
+
+#friend-message-list {
+    border-radius: 2vh;
+    align-items: center;
+    height: 55vh;
+}
+
+.list::-webkit-scrollbar {
+    width: 1.3vh;
+}
+
+.list::-webkit-scrollbar-track {
+    background: var(--scroll-bar-background-color);
+    height: 50%;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background: var(--button-border);
+    border-radius: 1vh;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 86%;
+    justify-content: space-around;
+    height: 4vh;
+    margin: 2vh 0;
+    border-bottom: 0.3vh solid var(--table-border-color);
+}
+
+.image {
+    flex: 1;
+    margin-top: -1vh;
+    max-height: 4.2vh;
+    max-width: 4.2vh;
+}
+
+.image img {
+    max-width: 46%;
+}
+
+.options {
+    flex: 3;
+}
+
+.options img {
+    max-width: 17%;
+    cursor: pointer;
+}
+
+.name {
+    flex: 7;
+    font-size: 4vh;
+    text-align: left;
+    color: var(--table-font-color);
+}
+
+.choice {
+    display: flex;
+    justify-content: space-around;
+    height: 70%;
+    flex: 2;
+}
+
+.choice img:hover,
+.choice div:hover {
+    cursor: pointer;
+}

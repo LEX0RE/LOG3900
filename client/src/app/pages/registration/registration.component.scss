@@ -1,0 +1,147 @@
+div {
+    align-items: center;
+}
+
+.verticalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.horizontalContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1,
+label {
+    align-items: center;
+    text-align: center;
+    color: var(--title-color);
+    font-weight: bold;
+    font-family: var(--title-font);
+}
+
+h1 {
+    margin-top: 1vh;
+    text-shadow: 0px -1px var(--shadow-color), 1px 0px var(--shadow-color), 0px 1px var(--shadow-color), -1px 0px var(--shadow-color);
+}
+
+h1 {
+    font-size: 9vh;
+    margin-bottom: 2vh;
+}
+
+label {
+    font-size: 3.5vh;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+
+input,
+select {
+    width: 60vh;
+    height: 4.7vh;
+    border-radius: 7px;
+    font-size: medium;
+    margin-bottom: 1vh;
+}
+
+.uneditableInput {
+    width: 15vh;
+}
+
+#increment,
+#decrement {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    margin-left: 3px;
+}
+
+#decrement {
+    transform: rotate(180deg);
+}
+
+#registerButton,
+.returnButton {
+    margin-top: 20px;
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+    border-radius: 10px;
+    width: 35vh;
+    height: 10vh;
+    border: 3px solid var(--button-border);
+    font-size: 3.5vh;
+}
+
+.returnButton {
+    font-size: 3.5vh;
+
+    margin-right: 140vh;
+    margin-top: -8vh;
+}
+
+.userExist {
+    font-size: 2vh;
+    color: var(--input-error-border-color);
+    font-weight: bold;
+    font-family: var(--title-font);
+}
+
+#registerButton:hover,
+.returnButton:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+#registerButton:disabled,
+.returnButton:disabled,
+#registerButton[disabled],
+.returnButton[disabled] {
+    border-color: var(--button-disabled-border-color);
+    background-color: var(--button-disabled-color);
+    color: var(--button-disabled-font-color);
+    cursor: default;
+}
+
+input.ng-touched.ng-invalid {
+    border: 2px solid var(--input-error-border-color);
+}
+
+.avatar,
+.avatarImg {
+    height: 16vh;
+    width: 19vh;
+    position: relative;
+}
+
+.editingBorder {
+    backdrop-filter: blur(1vh);
+    height: 4.5vh;
+    width: 19vh;
+    justify-content: flex-end;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.selectAvatar {
+    background-color: transparent;
+    border: none;
+    color: var(--game-item-info-color);
+    font-size: 4vh;
+}
+
+.selectAvatar:hover {
+    background-color: transparent;
+    border: none;
+    color: var(--play-button-color);
+    cursor: pointer;
+    transition: ease-out 0.2s;
+}

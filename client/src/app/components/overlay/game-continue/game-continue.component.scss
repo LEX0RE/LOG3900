@@ -1,0 +1,43 @@
+#container {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40vh;
+    width: 60vh;
+    text-align: center;
+    border: 0.4vh solid var(--overlay-border-color);
+    background-color: var(--overlay-background-color);
+    border-radius: 3vh;
+    z-index: 1;
+}
+
+p {
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 4vh;
+    color: var(--title-color);
+    text-shadow: 0vh -0.01vh var(--shadow-color), 0.01vh 0vh var(--shadow-color), 0vh 0.01vh var(--shadow-color), -0.01vh 0vh var(--shadow-color);
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+button {
+    background-color: var(--button-color);
+    border: 0.3vh solid var(--button-border);
+    font-size: 3vh;
+    color: var(--button-font-color);
+    border-radius: 4vh;
+    height: 10vh;
+    width: 20vh;
+    margin: 3vh;
+    margin-top: 15vh;
+}

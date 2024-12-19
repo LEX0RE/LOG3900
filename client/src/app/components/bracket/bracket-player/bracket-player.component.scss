@@ -1,0 +1,54 @@
+img {
+    width: 8vh;
+    height: 8vh;
+}
+
+#bracket-player {
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    text-align: center;
+    margin: auto;
+    padding-right: 8px;
+    background-color: var(--profile-background);
+    width: 14vw;
+    height: 8vh;
+    overflow: hidden;
+}
+
+#bracket-player.self {
+    outline: 6px solid green;
+}
+
+p {
+    text-align: center;
+    margin: auto 8px;
+}
+
+// Inspired from https://stackoverflow.com/questions/18611195/x-close-button-only-using-css
+#mdiv {
+    position: relative;
+    top: -4.3vh;
+    left: 8.5vh;
+    z-index: 0;
+}
+
+.mdiv {
+    height: 4px;
+    width: 100px;
+    background-color: red;
+    transform: rotate(-21.5deg);
+    z-index: 1;
+}
+
+.md {
+    height: 4px;
+    width: 100px;
+    background-color: red;
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+#player-container {
+    height: 8vh;
+}

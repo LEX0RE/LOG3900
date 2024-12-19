@@ -1,0 +1,12 @@
+<div *ngIf="chatBoxInteractionService.isChatShow">
+    <div id="container">
+        <div id="container-chat-box">
+            <app-chat-box></app-chat-box>
+        </div>
+    </div>
+</div>
+<div *ngIf="chatBoxInteractionService.isPortalShow" hidden>
+    <div class="portal-outlet">
+        <ng-template [cdkPortalOutlet]="chatBox"></ng-template>
+    </div>
+</div>

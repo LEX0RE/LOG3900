@@ -1,0 +1,497 @@
+{
+    "helloWorld": "Hello World!",
+    "@helloWorld": {
+        "description": "The conventional newborn programmer greeting"
+    },
+    "enterYourMessage": "Enter your message",
+    "@enterYourMessage": {
+        "description": "the label for the text field"
+    },
+    "searchAChannel": "Search a channel",
+    "@chooseAChannel": {
+        "description": "the title for the chat when you search a channel"
+    },
+    "username": "Username",
+    "@username": {
+        "description": "the label for the username text field"
+    },
+    "pleaseEnterText": "Please enter some text",
+    "@pleaseEnterText": {
+        "description": "the error message when the user tries to submit an empty text field"
+    },
+    "usernameTooLong": "Username is too long",
+    "@usernameTooLong": {
+        "description": "the error message when the user tries to submit a username that is too long"
+    },
+    "usernameTooShort": "Username is too short",
+    "@usernameTooShort": {
+        "description": "the error message when the user tries to submit a username that is too short"
+    },
+    "usernameInvalid": "Username must be only letters, numbers, '-' or '_'",
+    "@usernameInvalid": {
+        "description": "the error message when the user tries to submit a username that is not composed with valid characters"
+    },
+    "emailTooLong": "Email is too long",
+    "@emailTooLong": {
+        "description": "the error message when the user tries to submit an email that is too long"
+    },
+    "emailInvalid": "Email is invalid",
+    "@emailInvalid": {
+        "description": "the error message when the user tries to submit an email that is invalid"
+    },
+    "email": "Email",
+    "@email": {
+        "description": "the label for the email text field"
+    },
+    "password": "Password",
+    "@password": {
+        "description": "the label for the password text field"
+    },
+    "passwordTooLong": "Password is too long",
+    "@passwordTooLong": {
+        "description": "the error message when the user tries to submit a password that is too long"
+    },
+    "passwordTooShort": "Password is too short",
+    "@passwordTooShort": {
+        "description": "the error message when the user tries to submit a password that is too short"
+    },
+    "passwordInvalid": "Password is invalid",
+    "@passwordInvalid": {
+        "description": "the error message when the user tries to submit a password that is invalid"
+    },
+    "login": "Login",
+    "@login": {
+        "description": "the label for the login button"
+    },
+    "signIn": "Log in",
+    "@signIn": {
+        "description": "the label for the signIn button"
+    },
+    "signUp": "Sign up",
+    "@signUp": {
+        "description": "the label for the signUp button"
+    },
+    "confirmPassword": "Confirm password",
+    "@confirmPassword": {
+        "description": "the label for the confirm password text field"
+    },
+    "passwordsDoNotMatch": "Passwords do not match",
+    "@passwordsDoNotMatch": {
+        "description": "the error message when the user tries to submit a password that does not match the confirm password"
+    },
+    "play": "Play",
+    "@play": {
+        "description": "The label for the play button"
+    },
+    "myProfile": "My profile",
+    "@myProfile": {
+        "description": "The label for the my profile button"
+    },
+    "welcome": "Welcome",
+    "@welcome": {
+        "description": "The label for the welcome message"
+    },
+    "team": "Team",
+    "@team": {
+        "description": "The label for the team text field"
+    },
+    "profile": "Profile",
+    "@profile": {
+        "description": "The header for the profile screen"
+    },
+    "statistic": "Statistic",
+    "@statistic": {
+        "description": "The label for button to access the statistic screen"
+    },
+    "history": "History",
+    "@history": {
+        "description": "The label for button to access the history screen"
+    },
+    "seeFriends": "See your friends",
+    "@seeFriends": {
+        "description": "The label for button to access the friends screen"
+    },
+    "loggingDetails": "Logging details",
+    "@loggingDetails": {
+        "description": "The table header for the logging details"
+    },
+    "action": "Action",
+    "@action": {
+        "description": "The table header for the action column"
+    },
+    "date": "Date",
+    "@date": {
+        "description": "The table header for the date column"
+    },
+    "time": "Time",
+    "@time": {
+        "description": "The table header for the time column"
+    },
+    "historyTitle": "Game history",
+    "@historyTitle": {
+        "description": "The title for game history table"
+    },
+    "outcome": "Outcome",
+    "@outcome": {
+        "description": "The table header for the outcome column"
+    },
+    "replay": "Replay",
+    "@replay": {
+        "description": "The table header for the replay column"
+    },
+    "win": "Win",
+    "@win": {
+        "description": "The label for a win"
+    },
+    "lost": "Lost",
+    "@lost": {
+        "description": "The label for a lost"
+    },
+    "classicGameModeGame": "Classic game",
+    "@classicGameModeGame": {
+        "description": "The label for the classic game mode choice button"
+    },
+    "friendsMode": "Friends",
+    "@friendsMode": {
+        "description": "The label for the friends mode choice button"
+    },
+    "blockList": "Blocked players",
+    "@blockList": {
+        "description": "The tab for the list of blocked players"
+    },
+    "friendsRequest": "Friend Requests",
+    "@friendsRequest": {
+        "description": "The label for the friends request"
+    },
+    "findAPlayer": "Find a player",
+    "@findAPlayer": {
+        "description": "The hint for research a player"
+    },
+    "tournamentGameMode": "Tournament",
+    "@tournamentGameMode": {
+        "description": "The label for the tournament game mode choice button"
+    },
+    "cooperativeGameModeGame": "Cooperative game",
+    "@cooperativeGameModeGame": {
+        "description": "The label for the cooperative game mode choice button"
+    },
+    "teamGameModeGame": "Team game",
+    "@teamGameModeGame": {
+        "description": "The label for the team game mode choice button"
+    },
+    "joinableGamesTitle": "Join a multiplayer game",
+    "@joinableGamesTitle": {
+        "description": "The title for the joinable games table"
+    },
+    "frenchDictionary": "French",
+    "@frenchDictionary": {
+        "description": "The name of the french dictionary"
+    },
+    "englishDictionary": "English",
+    "@englishDictionary": {
+        "description": "The name of the english dictionary"
+    },
+    "gameCreator": "Creator",
+    "@gameCreator": {
+        "description": "The title of the column for the game creator"
+    },
+    "gameParameters": "Game parameters",
+    "@gameParameters": {
+        "description": "The title of the column for the game parameters"
+    },
+    "realPlayersVirtualPlayersObservers": "Real players - Virtual players - Observers",
+    "@realPlayersVirtualPlayersObservers": {
+        "description": "The title of the column for the number of each participant in the lobby of a game"
+    },
+    "back": "←Back",
+    "@back": {
+        "description": "The label for back buttons"
+    },
+    "enterBlankLetter": "Enter a blank letter",
+    "@enterBlankLetter": {
+        "description": "the input hint for the blank letter form"
+    },
+    "blankLetterRequired": "Blank letter is required",
+    "@blankLetterRequired": {
+        "description": "the error message when the user tries to submit a blank letter that is empty"
+    },
+    "blankLetterTooLong": "It must be only one letter",
+    "@blankLetterTooLong": {
+        "description": "the error message when the user tries to submit a blank letter that is too long"
+    },
+    "blankLetterInvalid": "It must be a letter",
+    "@blankLetterInvalid": {
+        "description": "the error message when the user tries to submit a blank letter that is invalid"
+    },
+    "submit": "Submit",
+    "@submit": {
+        "description": "the label for the submit button"
+    },
+    "place": "Place",
+    "@place": {
+        "description": "the label for the place button on a game"
+    },
+    "pass": "Pass",
+    "@pass": {
+        "description": "the label for the pass button on a game"
+    },
+    "chooseTheme": "Choose a color theme : ",
+    "@chooseTheme": {
+        "description": "the label of the theme dropdown button"
+    },
+    "colorTheme": "Color theme",
+    "@colorTheme": {
+        "description": "the placeholder of the theme dropdown button"
+    },
+    "languagePickerHint": "Choose a language : ",
+    "@languagePickerHint": {
+        "description": "the hint of the language dropdown button"
+    },
+    "myProfileButton": "My profile",
+    "@myProfileButton": {
+        "description": "the label of the profile button"
+    },
+    "nameDefaultTheme": "Default",
+    "@nameDefaultTheme": {
+        "description": "the name of the default theme"
+    },
+    "nameDarkTheme": "Dark",
+    "@nameDarkTheme": {
+        "description": "the name of the dark theme "
+    },
+    "nameUnderTheSeaTheme": "Under the sea",
+    "@nameUnderTheSeaTheme": {
+        "description": "the name of the blue theme "
+    },
+    "profilePicture": "Profile picture",
+    "@profilePicture": {
+        "description": "the label for the profile picture text field"
+    },
+    "language": "Language",
+    "@language": {
+        "description": "the label for the language text field"
+    },
+    "theme": "Theme",
+    "@theme": {
+        "description": "the label for the theme text field"
+    },
+    "lobbyTitle": "Lobby",
+    "@lobbyTitle": {
+        "description": "The title for the lobby screen"
+    },
+    "leaveLobby": "Leave",
+    "@leaveLobby": {
+        "description": "The label for the leave lobby button"
+    },
+    "realPlayersColumnTitle": "Real Players",
+    "@realPlayersColumnTitle": {
+        "description": "The title of the real players column in lobbies"
+    },
+    "virtualPlayerColumnTitle": "Virtual Players",
+    "@virtualPlayerColumnTitle": {
+        "description": "The title of the virtual players column in lobbies"
+    },
+    "observersColumnTitle": "Observers",
+    "@observersColumnTitle": {
+        "description": "The title of the observers column in lobbies"
+    },
+    "createGame": "Create game",
+    "@createGame": {
+        "description": "The label of the create game button"
+    },
+    "createNewGame": " Create new game",
+    "@createNewGame": {
+        "description": "The label of the create new game button"
+    },
+    "joinGame": "Join game",
+    "@joinGame": {
+        "description": "The label of the join game button"
+    },
+    "dictionary": "Dictionary",
+    "@dictionary": {
+        "description": "The label of the dictionary selector"
+    },
+    "turnDuration": "Turn duration",
+    "@turnDuration": {
+        "description": "The label of the turn duration selector"
+    },
+    "publicGame": "Public game",
+    "@publicGame": {
+        "description": "The label of the public game selector"
+    },
+    "startGame": "Start game",
+    "@startGame": {
+        "description": "The label of the button to start the game (only visible to the creator)"
+    },
+    "nameFrench": "French",
+    "@nameFrench": {
+        "description": "The name of the french field label"
+    },
+    "nameEnglish": "English",
+    "@nameEnglish": {
+        "description": "The name of the english field label"
+    },
+    "notificationText": " sent you a message!",
+    "@notificationText": {
+        "description": "the information message of a notification"
+    },
+    "visibility": "Visibility",
+    "@visibility": {
+        "description": "the name of the visibility column"
+    },
+    "publicNoPassword": "Public no PWD",
+    "@publicNoPassword":{
+        "description": "description of public without password game visibility"
+    },
+    "publicPassword": "Public with PWD",
+    "@publicPassword":{
+        "description": "description of public with password game visibility"
+    },
+    "private": "Private",
+    "@private":{
+        "description": "description of private game visibility"
+    },
+    "approvalWaiting" : "Waiting for creator's approval.",
+    "@approvalWaiting": {
+        "description": "message appearing while a player waits to get accepted to join a lobby"
+    },
+    "cancel" : "Cancel",
+    "@cancel": {
+        "description": "cancel a request to join a game"
+    },
+    "surrender": "Surrender",
+    "@surrender": {
+        "description": "The label of the button to surrender the current in progress tournament/game"
+    },
+    "leaveGame": "Leave",
+    "@leave": {
+        "description": "The label of the button to leave the finished tournament/game"
+    },
+    "observerButtonLabel": "Observe",
+    "@observerButtonLabel": {
+        "description": "The label of the button to observe a in progress tournament/game"
+    },
+    "consolation": "Match for 3rd place",
+    "@consolation": {
+        "description": "The label of the title for the consolation section of tournament"
+    },
+    "userGameStatistic": "Your game statistics",
+    "tournamentGameStatistic": "Your tournament statistics",
+    "seeYourFriends": "See your friends",
+    "connection": "Connection",
+    "disconnection": "Disconnection",
+    "nPlayedGames": "Played games",
+    "nWonGames": "Won games",
+    "meanScore": "Average score",
+    "meanDuration": "Average duration",
+    "nTournamentPlayed": "Played tournaments",
+    "nPoints": "Tournament points",
+    "nFirstPlace": "First place",
+    "nSecondPlace": "Second place",
+    "nThirdPlace": "Third place",
+    "nFourthPlace": "Fourth place",
+    "yes": "Yes",
+    "@yes": {
+        "description": "Positive answer to a Yes/No question"
+    },
+    "no": "No",
+    "@no": {
+        "description": "Negative answer to a Yes/No question"
+    },
+    "ok": "OK",
+    "@ok": {
+        "description": "Label of the OK button"
+    },
+    "surrenderConfirmTitle": "Are you sure you want to surrender ?",
+    "@surrenderConfirmTitle": {
+        "description": "Title of the confirmation for the surrender action"
+    },
+    "loadingGameTitle": "Loading game",
+    "@loadingGame": {
+        "description": "Title of the waiting popup for loading game"
+    },
+    "wonEndAnnounceLabel": " won",
+    "@wonEndAnnounceLabel": {
+        "description": "End of the sentence of the winners"
+    },
+    "lostEndAnnounceLabel": " lost",
+    "@lostEndAnnounceLabel": {
+        "description": "End of the sentence of the losers"
+    },
+    "gameContinueText": "Your opponent quit the game. You win and can continue playing against a virtual player",
+    "@gameContinueText": {
+        "description": "Text when all opponent have surrender the game"
+    },
+    "letterRemaining": " Letter",
+    "@letterRemaining": {
+        "description": "Label of the letter remaining when one letter is remaining"
+    },
+    "lettersRemaining": " Letters",
+    "@lettersRemaining": {
+        "description": "Label of the letters remaining when multiple letter are remaining"
+    },
+    "wantsToJoin": " wants to join.",
+    "@wantsToJoin": {
+        "description": "the text printed when a player requests to join a private game"
+    },
+    "accept": "Accept",
+    "@accept": {
+        "description": "the label of the accept button to accept a player's request"
+    },
+    "decline": "Decline",
+    "@decline": {
+        "description": "the label of the decline button to accept a player's request"
+    },
+    "passwordGame": "Password :",
+    "@passwordGame": {
+        "description": "The label of the password selector for a public game"
+    },
+    "youWereRejected": "You were rejected by the creator.",
+    "@youWereRejected": {
+        "description": "the text printed when a creator declines a player's request to join a private game"
+    },
+    "enterPasswordGame": "Please enter the game's password.",
+    "@enterPasswordGame": {
+        "description": "Message asking to enter password to enter a game"
+    },
+    "goToGame": "Go to the game",
+    "@goToGame": {
+        "description": "The label of the button to validate the password"
+    },
+    "invalidPasswordNewGame": "The password is incorrect.",
+    "@invalidPasswordNewGame": {
+        "description": "The error message of an invalid password"
+    },
+    "unableConnect": " Unable to connect",
+    "@unableConnect": {
+        "description": "Label of the error when client cannot connect to server"
+    },
+    "loading": "Loading...",
+    "@loading": {
+        "description": "Title of the waiting popup"
+    },
+    "classic": "Classic",
+    "tournament": "Tournament",
+    "cooperative": "Cooperative",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "noResponse": "No response",
+    "placeLetter": "Place letter",
+    "help": "Help",
+    "hint": "Hint",
+    "trade": "Trade",
+    "skipTurn": "Skip turn",
+    "stash": "Stash",
+    "actionToApprove": "Action to approve",
+    "preview": "Preview",
+    "cancel": "Cancel",
+    "approvals": "Approval(s)",
+    "pending": "Pending",
+    "approve": "Approve",
+    "reject": "Reject",
+    "propose": "Propose",
+    "hintResearch": "Looking for hints...",
+    "hintFoundAll": "These are the 5 best word placements",
+    "hintFoundSome": "These are the only word placements that were found",
+    "noHintFound": "No placement possibility was found"
+}

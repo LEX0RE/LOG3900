@@ -1,0 +1,22 @@
+<div id="grid-container">
+    <p>Scrabble</p>
+    <div appDebounceKeyPressed (debouncedKeyDown)="buttonDetect($event)" (focusOut)="onFocusOut()">
+        <canvas id="canvas" #gridCanvas [attr.width]="size" [attr.height]="size" (click)="onMouseDown($event)"></canvas>
+        <div id="action-button" *ngIf="!isObservationPage">
+            <button [disabled]="!isPlacement || endGame.endGame" class="play-btn" type="button" appDebounceClick (debounceClick)="onClickPlay()">
+                {{ playButtonText }}
+            </button>
+            <button
+                [disabled]="!gameUpdate.playerInfo.turn || isActionProposed || endGame.endGame"
+                class="pass-btn"
+                type="button"
+                appDebounceClick
+                (debounceClick)="onClickPass()"
+            >
+                {{translationsContainer.get('pass')}}
+            </button>
+        </div>
+    </div>
+    <app-easel *ngIf="!isObservationPage"></app-easel>
+</div>
+<app-approval-panel></app-approval-panel>

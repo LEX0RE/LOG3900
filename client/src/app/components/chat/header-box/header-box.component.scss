@@ -1,0 +1,70 @@
+div {
+    background-color: var(--input-background-color);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#title {
+    font-size: 2.5vh;
+    color: var(--message-font-color);
+    align-items: center;
+    text-align: center;
+}
+#screenButton {
+    display: flex;
+    flex-direction: row;
+    height: 65%;
+}
+
+img {
+    max-width: 100%;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+#exitButton {
+    margin-top: 4px;
+    height: 70%;
+}
+
+button {
+    margin-left: 2px;
+    margin-right: 2px;
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.notification {
+    position: absolute;
+    top: 0%;
+    right: 14%;
+    width: auto;
+
+    color: var(--message-font-color);
+    background-color: var(--notification-color);
+    padding: 9%;
+    border-radius: 100%;
+}
+
+#MessageAndOption button[switchRelation='click'] {
+    background-color: var(--button-hover-color);
+    border-radius: 100%;
+}
+
+.fa-envelope {
+    font-size: 200%;
+    color: red;
+}
+
+.headerBoxContainer {
+    width: 100%;
+}

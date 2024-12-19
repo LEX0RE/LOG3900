@@ -1,0 +1,78 @@
+#friend-list {
+    background-color: var(--table-color);
+    border: 0.5vh solid var(--button-border);
+    border-radius: 2vh;
+    height: 30vh;
+    width: 52vh;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.friend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    height: 4vh;
+    margin: 2vh 0;
+    border-bottom: 0.3vh solid var(--table-border-color);
+}
+
+.name {
+    flex: 1;
+    font-size: 4vh;
+    text-align: left;
+    color: var(--table-font-color);
+    margin-bottom: 3vh;
+}
+
+.image {
+    flex: 2;
+    max-height: 5vh;
+    margin-top: -2vh;
+    margin-right: 3vh;
+    max-width: 5vh;
+}
+
+.image img {
+    max-width: 46%;
+}
+
+#error {
+    text-align: center;
+    width: 100%;
+    font-size: 2vh;
+    height: 3vh;
+}
+
+.choice img {
+    max-height: 7vh;
+    max-width: 7vh;
+    margin-top: -1.5vh;
+}
+
+.choice:hover {
+    cursor: pointer;
+}
+
+#title-friend-list {
+    font-size: 3vh;
+    text-align: center;
+
+    margin-bottom: 0vh;
+}
+
+#friend-list::-webkit-scrollbar-track {
+    background: var(--scroll-bar-background-color);
+    height: 50%;
+}
+
+#friend-list::-webkit-scrollbar-thumb {
+    background: var(--button-border);
+    border-radius: 1vh;
+}

@@ -1,0 +1,16 @@
+<div class="horizontalContainer">
+    <div class="item">
+        {{ date }}
+    </div>
+    <div class="item">
+        {{ time }}
+    </div>
+    <div class="item">
+        <div *ngIf="isWin">{{translationsContainer.get('victory')}}</div>
+        <div *ngIf="!isWin">{{translationsContainer.get('defeat')}}</div>
+    </div>
+    <div *ngIf="hasReplay" class="item replay-button" (click)="toReplay()">
+        <img src="assets/images/replay_icon.png" alt="replay_icon" />
+    </div>
+    <div *ngIf="!hasReplay" class="item"></div>
+</div>

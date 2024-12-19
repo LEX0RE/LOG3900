@@ -1,0 +1,31 @@
+<div *ngIf="!isGame || (isGame && isPublic)" class="horizontalContainer">
+    <div class="column-item" style="flex: 2">
+        <p>{{ creatorName }}</p>
+    </div>
+    <div class="column-item parameter" style="flex: 3">
+        <img *ngIf="!isCooperativeGameMode" style="flex: 1" id="timer" src="assets/images/timer.png" alt="timer" />
+        <div *ngIf="!isCooperativeGameMode" style="flex: 3">{{ turnTimer }}</div>
+    </div>
+    <div class="column-item" style="flex: 4">
+        <p>{{ visibility }}</p>
+    </div>
+    <div class="column-item" style="flex: 2">
+        <p>{{ nPlayers }}</p>
+    </div>
+    <div *ngIf="!isCooperativeGameMode" class="column-item" style="flex: 2">
+        <p>{{ nVirtualPlayers }}</p>
+    </div>
+    <div class="column-item" style="flex: 2">
+        <p>{{ nObservers }}</p>
+    </div>
+    <div class="column-item joinButton" [ngClass]="{ noHover: isMaxedOutPlayers || isGame }" style="flex: 2">
+        <div *ngIf="!isMaxedOutPlayers && !isGame" (click)="joinLobby()">
+            <img id="join_icon" src="assets/images/join_icon.png" alt="joinButton" />
+        </div>
+    </div>
+    <div class="column-item observeButton" [ngClass]="{ noHover: !isPublic }" style="flex: 2">
+        <div *ngIf="isPublic" (click)="observeLobby()">
+            <img id="observe_icon" src="assets/images/observe_icon.png" alt="observeButton" />
+        </div>
+    </div>
+</div>

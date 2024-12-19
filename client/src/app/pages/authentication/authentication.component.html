@@ -1,0 +1,17 @@
+<div class="verticalContainer">
+    <h1>Scrabble</h1>
+    <h2>{{translationsContainer.get('logIn')}}</h2>
+    <p *ngIf="userInvalid" class="userInvalid" p>{{ error }}</p>
+    <form [formGroup]="loginForm" class="verticalContainer" (ngSubmit)="onSubmit()">
+        <label for="username-input">{{translationsContainer.get('username')}} :</label>
+        <input id="username-input" type="text" formControlName="userName" />
+        <span *ngIf="loginForm.controls['userName'].errors" class="userInvalid">{{translationsContainer.get('emptyField')}}</span>
+        <label for="password-input" type="password">{{translationsContainer.get('password')}} :</label>
+        <input id="password-input" type="password" formControlName="password" />
+        <span *ngIf="loginForm.controls['password'].errors" class="userInvalid">{{translationsContainer.get('emptyField')}}</span>
+        <button id="loginButton" type="submit" [disabled]="!loginForm.valid">{{translationsContainer.get('logIn')}}</button>
+    </form>
+    <p>
+        {{translationsContainer.get('registerHint1')}} <a routerLink="/registration"> {{translationsContainer.get('registerHint2')}} </a>
+    </p>
+</div>

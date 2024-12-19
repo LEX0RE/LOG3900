@@ -1,0 +1,27 @@
+<section class="outputBox">
+    <app-invitation-box></app-invitation-box>
+    <ul #scrollBar>
+        <div *ngIf="chatBoxInteractionService.isMessageChat">
+            <div *ngFor="let message of messages" id="message" [attr.sender]="setCategory(message.user.id)">
+                <div id="profilePicture">
+                    <img class="avatarOthers" *ngIf="setCategory(message.user.id) === others" src="{{ message.profilePicture }}" alt="" />
+                </div>
+                <div id="messageBloc">
+                    <div id="senderAndTime">
+                        <div class="sender" *ngIf="setCategory(message.user.id) === others">{{ message.user.name }}</div>
+                        <div class="time" *ngIf="setCategory(message.user.id) === others || setCategory(message.user.id) === client">
+                            {{ formatTime(message.time) }}
+                        </div>
+                    </div>
+                    <li>
+                        <div id="messageContent">
+                            {{ message.content }}
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <app-channel-joined-box></app-channel-joined-box>
+        <app-search-channel-box></app-search-channel-box>
+    </ul>
+</section>

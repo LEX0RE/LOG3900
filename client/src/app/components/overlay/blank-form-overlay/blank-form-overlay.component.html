@@ -1,0 +1,19 @@
+
+<div *ngIf="isOpen">
+    <div id="screen">
+
+
+        <div *ngIf="!form.valid" class="invalid">{{error}}</div>
+        <div id="overlay">
+            <form [formGroup]="form" class="verticalContainer" (ngSubmit)="onSubmit()">
+                
+                <label for="letter-input">{{translationsContainer.get('enterBlankLetter')}} :</label>
+                <input id="letter-input" type="text" formControlName="letter" />
+                
+                <button id="submit" type="submit" [disabled]="!form.valid">
+                    {{translationsContainer.get('submit')}}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

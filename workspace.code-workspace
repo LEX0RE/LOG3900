@@ -1,0 +1,56 @@
+{
+    "folders": [
+        {
+            "name": "LOG3900-206",
+            "path": "."
+        },
+        {
+            "name": "client",
+            "path": "client"
+        },
+        {
+            "name": "server",
+            "path": "server"
+        },
+        {
+            "name": "common",
+            "path": "common"
+        },
+        {
+            "name": "mobile",
+            "path": "mobile"
+        }
+    ],
+    "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[dart]": {
+            "editor.defaultFormatter": "Dart-Code.dart-code",
+        },
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+            "source.fixAll.eslint": true
+        },
+        "html.format.indentInnerHtml": true,
+        "dart.buildRunnerAdditionalArgs": ["--delete-conflicting-outputs"],
+        "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+        "eslint.workingDirectories": ["./client", "./server"],
+        "eslint.probe": ["javascript", "typescript", "html", "vue", "markdown"],
+        "eslint.validate": ["javascript", "typescript", "html", "vue", "markdown"],
+        "liveServer.settings.multiRootWorkspaceName": "LOG3900-206",
+        "files.eol": "\n",
+        "dart.lineLength": 120,
+        "cSpell.words": ["Gaddag", "GAMEMODE", "Gameplay", "typedi"],
+        "[dockerfile]": {
+            "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+        },
+        "[dockercompose]": {
+            "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+        },
+        "files.exclude": {
+            "**/*.mocks.dart": true,
+            "**/*.g.dart": true
+        },
+        "jenkins.url": "http://log3900:11cb703667f464516ad78b6a2d37b0698f@log3900.lexore.ca:8080/"
+    }
+}

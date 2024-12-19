@@ -1,0 +1,17 @@
+button {
+    border-radius: 2.2vh;
+    background-color: var(--quit-button-color);
+    color: var(--button-font-color);
+    font-size: 3vh;
+    width: 20vh;
+    height: 5vh;
+    text-align: center;
+    padding: 0vh;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--quit-button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}

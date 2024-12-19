@@ -1,0 +1,14 @@
+<button *ngIf="!isEndGame && isGamePage" id="surrender" (click)="change = true">{{ translationsContainer.get('surrender') }}</button>
+
+<div class="container" *ngIf="!isEndGame">
+    <div *ngIf="change">
+        <div id="screen"></div>
+        <div class="modal">
+            {{ translationsContainer.get('areYouSureYouWantToSurrender') }}
+            <div class="positionButton">
+                <button class="yes" (click)="onClick()">{{ translationsContainer.get('yes') }}</button>
+                <button (click)="change = false" class="no">{{ translationsContainer.get('no') }}</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div id="searchChannel" *ngIf="chatBoxInteractionService.isSearchChat">
+    <div class="channel" *ngFor="let channel of chatAvailable; index as number">
+        <div class="channelName">{{ channel.name }}</div>
+        <button class="addChannel" (click)="addChat(channel)">+</button>
+    </div>
+</div>

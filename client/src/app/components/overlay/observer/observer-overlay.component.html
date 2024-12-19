@@ -1,0 +1,13 @@
+<div id="screen">
+    <div class="overlay">
+        <div class="horizontalContainer"></div>
+        <div class="horizontalContainer" id="timeline">
+            <div class="verticalContainer" style="flex: 1"></div>
+
+            <div class="verticalContainer" style="flex: 1"></div>
+        </div>
+    </div>
+    <div class="overlay" id="leave-button">
+        <button id="returnButton" (click)="stopObserving()">← {{ translationsContainer.get('return') }}</button>
+    </div>
+</div>

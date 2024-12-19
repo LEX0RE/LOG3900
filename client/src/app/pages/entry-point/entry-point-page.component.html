@@ -1,0 +1,22 @@
+<section>
+    <div class="verticalContainer" id="letter">
+        <app-letter [letter]="{ letter: 'K', point: 10 }" [letterSize]="14" [fontSize]="55" id="kLetter"></app-letter>
+        <app-letter [letter]="{ letter: 'Y', point: 10 }" [letterSize]="11" [fontSize]="53" id="yLetter"></app-letter>
+        <app-letter [letter]="{ letter: 'E', point: 1 }" [letterSize]="8" [fontSize]="35" id="eLetter"></app-letter>
+        <app-letter [letter]="{ letter: 'A', point: 1 }" [letterSize]="13.5" [fontSize]="55" id="aLetter"></app-letter>
+        <app-letter [letter]="{ letter: '*', point: 0 }" [letterSize]="8" [fontSize]="35" id="blankLetter"></app-letter>
+        <app-letter [letter]="{ letter: 'B', point: 3 }" [letterSize]="10.5" [fontSize]="55" id="bLetter"></app-letter>
+        <app-letter [letter]="{ letter: 'L', point: 1 }" [letterSize]="10.5" [fontSize]="55" id="lLetter"></app-letter>
+        <app-letter [letter]="{ letter: 'M', point: 2 }" [letterSize]="10.5" [fontSize]="45" id="mLetter"></app-letter>
+    </div>
+
+    <div class="verticalContainer">
+        <h1>Scrabble</h1>
+        <button id="classic-button" (click)="toClassicLobbies()">{{ translationsContainer.get('classic') }}</button>
+        <button id="classic-button" (click)="toTournamentLobbies()" routerLink="/tournamentNavigation">
+            {{ translationsContainer.get('tournament') }}
+        </button>
+        <button id="classic-button" (click)="toCooperativeLobbies()">{{ translationsContainer.get('coop') }}</button>
+        <button id="profile-button" routerLink="/profile">{{ translationsContainer.get('myProfile') }}</button>
+    </div>
+</section>

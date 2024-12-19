@@ -1,0 +1,170 @@
+h1 {
+    margin-top: 4vh;
+    margin-bottom: -3vh;
+    font-family: var(--title-font);
+    font-style: bold;
+    font-size: 7.5vh;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: var(--title-color);
+    text-shadow: 0vh -0.01vh var(--shadow-color), 0.01vh 0vh var(--shadow-color), 0vh 0.01vh var(--shadow-color), -0.01vh 0vh var(--shadow-color);
+}
+
+label {
+    align-items: center;
+    text-align: center;
+    color: var(--title-color);
+    font-weight: bold;
+    font-family: var(--title-font);
+    font-size: 4vh;
+}
+
+button {
+    margin-top: 20px;
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+    border-radius: 10px;
+    border: 3px solid var(--button-border);
+    font-size: 2.9vh;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.form-column {
+    justify-content: baseline;
+    align-items: center;
+}
+
+div.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1;
+}
+
+#history-button,
+#statistic-button,
+#friends-button {
+    margin-top: 5vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    width: 20vh;
+    height: 9vh;
+}
+
+.form-row > input {
+    height: 50%;
+}
+
+.form-row > label {
+    white-space: nowrap;
+}
+div.form-row {
+    margin-left: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1;
+}
+
+.spacer {
+    height: 10vh;
+}
+
+#vertical-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-big-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 2 1 2;
+    flex-basis: 2 1 2;
+}
+
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+.returnButton {
+    width: 20vh;
+    height: 9vh;
+    position: absolute;
+    bottom: 6vh;
+    left: 4vh;
+}
+
+#invalid-server {
+    margin-top: 25vh;
+    text-align: center;
+    font-style: bold;
+    font-size: 3vh;
+}
+
+input.ng-touched.ng-invalid {
+    border: 2px solid var(--input-error-border-color);
+}
+
+.avatar,
+.avatarImg {
+    height: 16vh;
+    width: 19vh;
+    position: relative;
+    border-radius: 50%;
+}
+
+.editingBorder {
+    height: 4.5vh;
+    width: 19vh;
+    justify-content: flex-end;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.selectAvatar {
+    background-color: transparent;
+    border: none;
+    color: var(--game-item-info-color);
+    font-size: 4vh;
+}
+
+.selectAvatar:hover {
+    background-color: transparent;
+    border: none;
+    color: var(--play-button-color);
+    cursor: pointer;
+    transition: ease-out 0.2s;
+}
+
+button[disabled] {
+    border-color: var(--button-disabled-border-color);
+    background-color: var(--button-disabled-color);
+}
+
+.userNameError {
+    margin-bottom: 5vh;
+    font-size: 2vh;
+    color: var(--input-error-border-color);
+    font-weight: bold;
+    font-family: var(--title-font);
+}

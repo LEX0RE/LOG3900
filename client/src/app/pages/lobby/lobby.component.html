@@ -1,0 +1,56 @@
+<h1>Scrabble</h1>
+<div class="horizontalContainer" id="table-wrapper">
+    <div style="flex:1"></div>
+    <div class="lobbyDisplay">
+        <div id="game-title">
+            <h3 style="font-size: 3vh">
+                {{
+                    isTournamentMode()
+                        ? translationsContainer.get('tournamentTitle')
+                        : isCooperativeGame
+                        ? translationsContainer.get('cooperativeTitle')
+                        : translationsContainer.get('classicTitle')
+                }}
+            </h3>
+        </div>
+        <div class="horizontalContainer" id="second-header">
+            <div *ngIf="hasToDisplayTurnTimer" class="horizontalContainer header-item" style="flex: 1">
+                <div style="flex: 2"></div>
+
+                <div class="img-wrapper" style="flex: 2">
+                    <img src="assets/images/timer.png" alt="timer" />
+                </div>
+                <div style="flex: 2; text-align: center; font-size: 3vh">{{ turnTimer }}</div>
+                <div style="flex: 2"></div>
+            </div>
+        </div>
+        <div id="user-list">
+            <h3>{{ translationsContainer.get('players') }}</h3>
+            <div *ngFor="let player of players" class="player-item userItem">
+                <img class="avatarOthers" *ngIf="player.profilePicture" src="{{ player.profilePicture }}" alt="profile-picture" />
+                <div>{{ player.name }}</div>
+            </div>
+            <div *ngIf="virtualPlayerNames.length !== 0">
+                <div class="divider"></div>
+                <h3>{{ translationsContainer.get('virtualPlayers') }}</h3>
+                <div *ngFor="let virtualPlayerName of virtualPlayerNames" class="bot-item userItem">
+                    <img class="avatarOthers" src="assets/images/player.png" alt="profile-picture" />
+                    <div>{{ virtualPlayerName }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="friend" style="flex: 1">
+        <div *ngIf="isCreator">
+            <app-friends-invitation></app-friends-invitation>
+        </div>
+    </div>
+</div>
+<app-join-request *ngIf="isCreator"></app-join-request>
+
+<button *ngIf="isCreator && players.length >= 2" id="startButton" (click)="startGame()">
+    {{ isTournamentMode() ? translationsContainer.get('startTournament') : translationsContainer.get('startGame') }}
+</button>
+<button class="returnButton" (click)="leaveLobby()" routerLink="/home">← {{ translationsContainer.get('return') }}</button>
+<!-- TODO: changer le routerLink par home? -->

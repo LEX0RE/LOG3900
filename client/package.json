@@ -1,0 +1,107 @@
+{
+    "name": "client",
+    "version": "1.0.0",
+    "private": true,
+    "main": "main.js",
+    "license": "UNLICENSED",
+    "author": "LOG3900-206",
+    "description": "Projet de Scrabble de l'équipe 206 pour le cours LOG3900",
+    "contributors": [
+        {
+            "name": "James Brutus"
+        },
+        {
+            "name": "Julie Labbé"
+        },
+        {
+            "name": "Nicolas Dépelteau"
+        },
+        {
+            "name": "Alexandre Gélinas"
+        },
+        {
+            "name": "Elizabeth Michaud"
+        },
+        {
+            "name": "Safa Ikhlef"
+        }
+    ],
+    "scripts": {
+        "start": "ng serve --open",
+        "start:electron": "npm run build:dev && electron .",
+        "build": "ng build --base-href ./",
+        "build:dev": "ng build --base-href ./ --configuration development",
+        "watch": "ng build --watch --configuration development",
+        "format": "prettier --config ../.prettierrc.yaml --ignore-path ../.prettierignore --write \"src/**/*\"",
+        "test": "ng test",
+        "playwright": "npx playwright install && npm run build:dev && npx playwright test --config=playwright/playwright.config.ts",
+        "coverage": "ng test --code-coverage --sourceMap=true",
+        "lint": "ng lint --format stylish",
+        "lint:fix": "npm run lint -- --fix",
+        "package": "electron-packager . scrabble --platform=win32 --arch=x64 --asar --ignore=/node_modules --ignore=/playwright --ignore=/src --overwrite --out=./build"
+    },
+    "dependencies": {
+        "-": "^0.0.1",
+        "@angular/animations": "^12.1.5",
+        "@angular/cdk": "^12.2.13",
+        "@angular/common": "12.1.5",
+        "@angular/compiler": "12.1.5",
+        "@angular/core": "12.1.5",
+        "@angular/forms": "12.1.5",
+        "@angular/material": "^12.2.13",
+        "@angular/platform-browser": "12.1.5",
+        "@angular/platform-browser-dynamic": "12.1.5",
+        "@angular/router": "12.1.5",
+        "@ngx-translate/core": "^13.0.0",
+        "@ngx-translate/http-loader": "^6.0.0",
+        "ci": "^2.1.1",
+        "electron-squirrel-startup": "^1.0.0",
+        "moment": "^2.29.4",
+        "ngx-translate": "^0.0.1-security",
+        "rxjs": "~6.6.0",
+        "save": "^2.9.0",
+        "socket.io-client": "^4.4.0",
+        "tslib": "^2.2.0",
+        "uuid": "^9.0.0",
+        "zone.js": "~0.11.4"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "~12.1.3",
+        "@angular-eslint/builder": "12.3.1",
+        "@angular-eslint/eslint-plugin": "12.3.1",
+        "@angular-eslint/eslint-plugin-template": "12.3.1",
+        "@angular-eslint/schematics": "12.3.1",
+        "@angular-eslint/template-parser": "12.3.1",
+        "@angular/cli": "~12.1.3",
+        "@angular/compiler-cli": "12.1.5",
+        "@playwright/test": "^1.32.2",
+        "@types/jasmine": "~3.8.0",
+        "@types/node": "^12.11.1",
+        "@types/uuid": "^9.0.1",
+        "@typescript-eslint/eslint-plugin": "4.28.2",
+        "@typescript-eslint/parser": "4.28.2",
+        "electron": "^22.3.2",
+        "electron-packager": "^17.1.1",
+        "eslint": "^7.26.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-import-resolver-typescript": "^2.4.0",
+        "eslint-plugin-deprecation": "^1.2.1",
+        "eslint-plugin-import": "^2.24.0",
+        "eslint-plugin-jsdoc": "^36.0.7",
+        "eslint-plugin-playwright": "^0.12.0",
+        "eslint-plugin-prefer-arrow": "^1.2.3",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-unicorn": "^35.0.0",
+        "jasmine-core": "~3.8.0",
+        "karma": "~6.3.0",
+        "karma-chrome-launcher": "~3.1.0",
+        "karma-coverage": "~2.0.3",
+        "karma-jasmine": "~4.0.0",
+        "karma-jasmine-html-reporter": "~1.7.0",
+        "karma-junit-reporter": "^2.0.1",
+        "node": "^14.17.6",
+        "playwright": "^1.32.2",
+        "prettier": "^2.3.2",
+        "typescript": "~4.3.2"
+    }
+}

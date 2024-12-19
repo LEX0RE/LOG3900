@@ -1,0 +1,49 @@
+include: package:flutter_lints/flutter.yaml
+Analyzer:
+    exclude: [lib/**.g.dart, lib/**.freezed.dart, test/**.dart]
+    errors:
+        empty_statements: error
+        unnecessary_new: error
+        unused_local_variable: error
+        non_constant_identifier_names: error
+        library_prefixes: error
+linter:
+    rules:
+        use_key_in_widget_constructors: true
+        avoid_function_literals_in_foreach_calls: false
+        prefer_expression_function_bodies: false
+        constant_identifier_names: false
+        prefer_function_declarations_over_variables: false
+        depend_on_referenced_packages: false
+        always_use_package_imports: true
+        curly_braces_in_flow_control_structures: false
+dart_code_metrics:
+    rules:
+        - avoid-boolean-literals-in-conditional-expressions
+        - avoid-catches-without-on-clauses
+        - avoid-catches-without-rethrow
+        - avoid-collapsible-if-statements
+        - avoid-conditional-expressions
+        - avoid-empty-catches
+        - avoid-enum-only-class
+        - avoid-escaping-closures
+        - avoid-ignoring-return-values
+        - avoid-logging-in-finally
+        - avoid-non-null-assertion
+        - avoid-null-checks
+        - avoid-returning-widgets
+        - avoid-returning-this
+        - avoid-single-cascade-in-expression-statements
+        - avoid-unnecessary-else
+        - avoid-unnecessary-lambdas
+        - avoid-unnecessary-parenthesis
+        - avoid-unnecessary-put-if-split
+        - avoid-unnecessary-put-else
+        - avoid-unnecessary-this
+        - avoid-void-as-return-type
+        - avoid-widgets-without-key
+        - avoid-argument-type-not-assignable
+        - avoid-returning-null
+        - avoid-returning-null-for-future
+        - avoid-returning-null-for-void
+        - avoid-returning-null-for-void-as-type

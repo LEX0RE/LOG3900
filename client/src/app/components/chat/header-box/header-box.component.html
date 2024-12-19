@@ -1,0 +1,31 @@
+<div class="headerBoxContainer">
+    <link href="https://unpkg.com/css.gg@2.0.0/icons/css/menu-round.css" rel="stylesheet" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <div *ngIf="chatBoxInteractionService.isChatShow">
+        <button (click)="closeChat()"><img id="exitButton" src="assets/images/exit_button.png" /></button>
+        <button (click)="this.chatBoxInteractionService.openPortal()"><img id="screenButton" src="assets/images/screen_button.png" /></button>
+    </div>
+    <div *ngIf="chatBoxInteractionService.isPortalShow">
+        <div class="headerBoxContainer"></div>
+    </div>
+    <div id="title">{{ channel }}</div>
+
+    <div id="MessageAndOption">
+        <button
+            (click)="friendRequestScreen()"
+            [attr.switchRelation]="socialManagerService.friendRequestScreen && socialManagerService.hasNewFriendRequest ? 'click' : ''"
+        >
+            <div *ngIf="socialManagerService.hasNewFriendRequest" class="notification">{{ socialManagerService.newFriends.length }}</div>
+            <i class="fa fa-envelope"></i>
+        </button>
+        <button (click)="goToChannelJoined()">
+            <i class="gg-menu-round"></i>
+        </button>
+    </div>
+</div>

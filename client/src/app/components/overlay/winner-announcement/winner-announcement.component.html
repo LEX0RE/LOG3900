@@ -1,0 +1,7 @@
+<div *ngIf="isEndGame && open" id="container">
+    <p *ngFor="let winner of winners">{{ winner }} {{translationsContainer.get('won')}}</p>
+    <p *ngFor="let loser of losers">{{ loser }} {{translationsContainer.get('lost')}}</p>
+    <div class="positionButton">
+        <button (click)="close()" type="button">{{translationsContainer.get('ok')}}</button>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+#tree-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#default-bracket {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#consolation {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#consolation p {
+    font-size: 2.9vh;
+    font-weight: bold;
+}

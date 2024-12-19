@@ -1,0 +1,28 @@
+<div id="screen">
+    <div class="overlay" id="point-of-view">
+        <div class="horizontalContainer">
+            <div *ngFor="let user of pointOfViews">
+                <button
+                    [ngClass]="{ selected: isSelected(user.id) }"
+                    [disabled]="isSelected(user.id)"
+                    class="point-of-view-button"
+                    (click)="selectPointOfView(user.id)"
+                >
+                    {{ user.name }}
+                </button>
+            </div>
+        </div>
+        <div class="horizontalContainer" id="timeline">
+            <div class="verticalContainer" style="flex: 1">
+                <button class="plus-minus-button" [disabled]="isStartOfTimeline" (click)="previousTurn()">-</button>
+            </div>
+
+            <div class="verticalContainer" style="flex: 1">
+                <button class="plus-minus-button" [disabled]="isEndOfTimeline" (click)="nextTurn()">+</button>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="leave-button">
+        <button id="returnButton" routerLink="/history">← {{translationsContainer.get('return')}}</button>
+    </div>
+</div>

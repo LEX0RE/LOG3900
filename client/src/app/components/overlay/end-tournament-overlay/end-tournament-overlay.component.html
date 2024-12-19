@@ -1,0 +1,4 @@
+<div *ngIf="isEndTournament && open" id="container">
+    <p *ngFor="let user of ranking">{{ user.rank }}: {{ user.user.name }}</p>
+    <div class="positionButton"><button (click)="close()" type="button">OK</button></div>
+</div>

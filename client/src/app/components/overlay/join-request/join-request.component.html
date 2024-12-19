@@ -1,0 +1,9 @@
+<div *ngIf="potentialPlayers.length > 0" id="screen">
+    <div id="container">
+        <div *ngFor="let potentialPlayer of potentialPlayers">
+            <p>{{ potentialPlayer.name }} {{ translationsContainer.get('wantsToJoin') }}</p>
+            <button (click)="accept(potentialPlayer)" type="button" class="green">{{ translationsContainer.get('accept') }}</button>
+            <button (click)="decline(potentialPlayer)" type="button" class="red">{{ translationsContainer.get('decline') }}</button>
+        </div>
+    </div>
+</div>

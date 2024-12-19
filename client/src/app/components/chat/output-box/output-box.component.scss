@@ -1,0 +1,138 @@
+section {
+    height: inherit;
+    border-radius: 2vh;
+    margin-right: 4px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    cursor: pointer;
+}
+
+#senderAndTime {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 3%;
+    color: white;
+}
+
+#message {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 95%;
+    min-height: 50px;
+    margin: 10px 0px;
+}
+
+#message[sender='client'] {
+    justify-content: flex-end;
+}
+
+#message[sender='others'] {
+    justify-content: flex-start;
+}
+
+#messageBloc {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    max-width: 80%;
+}
+
+#messageContent {
+    overflow-wrap: break-word;
+    font-family: var(--font);
+    white-space: pre-wrap;
+}
+
+img {
+    height: 35px;
+    width: 35px;
+}
+
+#profilePicture {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 2px;
+}
+
+.avatarClient {
+    border-radius: 21.4px;
+    margin-top: -10px;
+    margin-left: 16vh;
+}
+
+.avatarOthers {
+    border-radius: 21.4px;
+}
+
+.time {
+    font-size: 80%;
+    margin: 2% 10px 0px;
+    color: var(--message-time-font-color);
+}
+
+#senderAndTime .sender {
+    color: var(--message-sender-font-color);
+    flex: 0 0 31%;
+}
+
+li {
+    list-style: none;
+    overflow-wrap: break-word;
+    font-family: var(--font);
+    white-space: pre-wrap;
+    min-width: 40%;
+}
+
+div[sender='client'] li,
+div[sender='others'] li {
+    padding: 1.5vh;
+    font-weight: 500;
+    color: var(--message-font-color);
+}
+
+div[sender='client'] li {
+    border-radius: 16px 16px 8px 16px;
+    text-align: right;
+    background-color: var(--client-message-color);
+}
+
+div[sender='system'] li {
+    color: var(--system-message-color);
+    margin: 2vh 0;
+    text-align: center;
+}
+
+div[sender='others'] li {
+    border-radius: 16px 16px 16px 8px;
+    text-align: left;
+    background-color: var(--other-message-color);
+}
+
+ul {
+    height: 100%;
+    padding: 16px 8px;
+    margin: 0vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+ul::-webkit-scrollbar-track {
+    background: var(--scroll-bar-background-color);
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: var(--button-border);
+    border-radius: 1vh;
+}

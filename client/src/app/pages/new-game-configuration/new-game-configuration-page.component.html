@@ -1,0 +1,37 @@
+<div class="verticalContainer">
+    <h1>Scrabble</h1>
+    <h2>{{ isTournamentMode() ? translationsContainer.get('configureTournament') : translationsContainer.get('configureGameParameters') }}</h2>
+    <app-error-creating-game *ngIf="openErrorCreatingGameOverlay()"></app-error-creating-game>
+
+    <form [formGroup]="newGameConfigForm" class="verticalContainer" (ngSubmit)="onSubmit()">
+        <label> {{ translationsContainer.get('turnTime') }} : </label>
+        <section class="horizontalContainer">
+            <input class="uneditableInput" type="text" readonly formControlName="turnDuration" />
+            <section class="verticalContainer">
+                <img id="increment" src="assets/images/triangle.jpg" (click)="incrementTurnDuration()" alt="increment" />
+                <img id="decrement" src="assets/images/triangle.jpg" (click)="decrementTurnDuration()" alt="decrement" />
+            </section>
+        </section>
+
+        <label>{{ translationsContainer.get('publicGame') }} </label>
+        <label class="switch">
+            <input type="checkbox" (change)="changeVisibility()" [checked]="isPublic" />
+            <span class="slider round"></span>
+        </label>
+        <label *ngIf="isPublic"> {{ translationsContainer.get('password') }} </label>
+        <label *ngIf="isPublic" id="passwordCheckbox" class="switch">
+            <input type="checkbox" (change)="changeVisibilityPassword()" [checked]="hasPassword" />
+            <span class="slider round"></span>
+        </label>
+        <input *ngIf="hasPassword && isPublic" class="passwordInput" type="password" formControlName="password" />
+        <div *ngIf="newGameConfigForm.controls['password'].errors && hasPassword && isPublic" class="passwordErrors">
+            {{ translationsContainer.get('passwordHint1') }} {{ minCharactersPassword }} {{ translationsContainer.get('and') }}
+            {{ maxCharactersPassword }} {{ translationsContainer.get('passwordHint2') }}
+        </div>
+
+        <button id="createGameButton" type="submit" [disabled]="!newGameConfigForm.valid || !isReady()">
+            {{ isTournamentMode() ? translationsContainer.get('createTournament') : translationsContainer.get('createGame') }}
+        </button>
+    </form>
+    <button id="returnButton" routerLink="/joinGame">← {{ translationsContainer.get('return') }}</button>
+</div>

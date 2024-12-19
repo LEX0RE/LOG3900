@@ -1,0 +1,50 @@
+#node-container {
+    display: inline-flex;
+}
+
+#current-node {
+    text-align: center;
+    vertical-align: middle;
+    margin: auto 0px;
+    background-color: var(--table-color);
+    border: 8px solid var(--table-border-color);
+    border-radius: 20px;
+    padding: 8px;
+}
+
+#child-node {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+#align-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#current-node p {
+    margin: 8px;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 8px;
+    background-color: var(--button-color);
+    border: 0.4vh solid var(--button-border);
+    border-radius: 1.5vh;
+    color: var(--button-font-color);
+    font-size: 2.1vh;
+    font-weight: bold;
+    width: 18vh;
+    height: 4vh;
+    text-align: center;
+    padding: 0vh;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}

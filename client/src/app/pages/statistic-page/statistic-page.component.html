@@ -1,0 +1,49 @@
+<h1>{{translationsContainer.get('statistics')}}</h1>
+
+<div class="verticalContainer">
+    <div class="verticalContainer table-container">
+        <div class="table">
+            <div class="primary-header">
+                <h3>{{translationsContainer.get('userGameStatistics')}}</h3>
+            </div>
+            <div class="secondary-header" class="horizontalContainer">
+                <h4 style="flex: 3">{{translationsContainer.get('nPlayedGames')}}</h4>
+                <h4 style="flex: 6">{{translationsContainer.get('nWonGames')}}</h4>
+                <h4 style="flex: 3">{{translationsContainer.get('meanScore')}}</h4>
+                <h4 style="flex: 3">{{translationsContainer.get('meanDuration')}}</h4>
+            </div>
+            <div id="item-list">
+                <div *ngFor="let userGameStatistic of userGameStatistics">
+                    <div class="item">
+                        <app-game-statistic-item [userGameStatistic]="userGameStatistic"></app-game-statistic-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="spacer"></div>
+    <div class="verticalContainer table-container">
+        <div class="table">
+            <div class="primary-header">
+                <h3>{{translationsContainer.get('tournamentGameStatistics')}}</h3>
+            </div>
+            <div class="secondary-header" class="horizontalContainer">
+                <h4>{{translationsContainer.get('nTournamentPlayed')}}</h4>
+                <h4>{{translationsContainer.get('nPoints')}}</h4>
+                <h4>{{translationsContainer.get('nFirstPlace')}}</h4>
+                <h4>{{translationsContainer.get('nSecondPlace')}}</h4>
+                <h4>{{translationsContainer.get('nThirdPlace')}}</h4>
+                <h4>{{translationsContainer.get('nFourthPlace')}}</h4>
+            </div>
+            <div id="item-list">
+                <div *ngFor="let userTournamentStatistic of userTournamentStatistics">
+                    <div class="item">
+                        <app-tournament-statistic-item [userTournamentStatistic]="userTournamentStatistic"></app-tournament-statistic-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="returnButton" routerLink="/profile">← {{translationsContainer.get('return')}}</button>

@@ -1,0 +1,37 @@
+<div *ngIf="isActionToApprove" class="main-container">
+    <h4 class="action-text">{{translateContainer.get('waitingForApprobation')}}</h4>
+    <h4 class="action-command">{{ actionToApprove }}</h4>
+
+    <div *ngIf="!isPlayersProposition()" class="preview-button">
+        <button class="preview" [disabled]="isPreviewingAction || !isActionPropositionPreviewable" (click)="onPreviewActionProposed()">
+            {{translateContainer.get('preview')}}
+        </button>
+        <button class="preview" [disabled]="!isPreviewingAction" (click)="onQuitPreviewing()">{{translateContainer.get('cancel')}}</button>
+    </div>
+    <div class="horizontal-container">
+        <div class="vertical-container">
+            <p class="column-title">{{translateContainer.get('approvals')}}</p>
+            <p *ngFor="let player of approvingPlayers">{{ player }}</p>
+        </div>
+
+        <div class="vertical-container">
+            <p class="column-title">{{translateContainer.get('waiting')}}</p>
+            <p *ngFor="let player of noResponsePlayers">{{ player }}</p>
+        </div>
+        <div class="vertical-container">
+            <p class="column-title">{{translateContainer.get('rejected')}}</p>
+            <p *ngFor="let player of rejectingPlayers">{{ player }}</p>
+        </div>
+    </div>
+    <div *ngIf="!isPlayersProposition()" class="response-button-container">
+        <button [disabled]="disableResponseButton(true)" class="approve-button" (click)="onApproveActionProposition()">
+            {{translateContainer.get('approve')}}
+        </button>
+        <button [disabled]="disableResponseButton(false)" class="reject-button" (click)="onRejectActionProposition()">
+            {{translateContainer.get('reject')}}
+        </button>
+    </div>
+    <div *ngIf="isPlayersProposition()" class="response-button-container">
+        <button (click)="onActionCancellation()" class="cancel-button">{{translateContainer.get('cancel')}}</button>
+    </div>
+</div>

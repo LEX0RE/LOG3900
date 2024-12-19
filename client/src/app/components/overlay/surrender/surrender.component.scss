@@ -1,0 +1,95 @@
+#screen {
+    position: absolute;
+
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--greying-screen-color);
+}
+.modal {
+    border: 4px solid var(--overlay-border-color);
+    color: var(--warning-font-color);
+    padding: 20px;
+    font-family: var(--warning-font);
+    line-height: 100px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    background-color: var(--overlay-background-color);
+    border-radius: 40px;
+    text-align: center;
+    z-index: 11;
+}
+
+.positionButton {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+    color: var(--button-font-color);
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#surrender {
+    border: 0.2vh solid var(--quit-button-border-color);
+    border-radius: 2.2vh;
+    background-color: var(--quit-button-color);
+    color: var(--button-font-color);
+    font-size: 3vh;
+    width: 20vh;
+    height: 5vh;
+    text-align: center;
+    margin: 8px;
+}
+
+#surrender:hover {
+    background-color: var(--quit-button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.yes {
+    background-color: var(--button-color);
+}
+
+.yes:hover {
+    background-color: var(--button-border);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.no {
+    background-color: var(--button-color);
+}
+
+.no:hover {
+    background-color: var(--button-border);
+
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.container {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 0%;
+    height: 0%;
+}

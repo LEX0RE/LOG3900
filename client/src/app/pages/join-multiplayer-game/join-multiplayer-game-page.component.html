@@ -1,0 +1,64 @@
+<h1>Scrabble</h1>
+<h2 *ngIf="isClassicGameMode()">{{ translationsContainer.get('joinClassicGame') }}</h2>
+<h2 *ngIf="isCooperativeGameMode()">{{ translationsContainer.get('joinCoopGame') }}</h2>
+<h2 *ngIf="isTournamentMode()">{{ translationsContainer.get('joinATournament') }}</h2>
+
+<div class="verticalContainer">
+    <div class="gameDisplay">
+        <div id="second-header" class="horizontalContainer">
+            <h4 style="flex: 2.05">{{ translationsContainer.get('creator') }}</h4>
+            <h4 style="flex: 2.57">{{ translationsContainer.get('parameters') }}</h4>
+            <h4 style="flex: 4">{{ translationsContainer.get('visibility') }}</h4>
+            <h4 style="flex: 2">{{ translationsContainer.get('numberOfPlayers') }}</h4>
+            <h4 *ngIf="!isCooperativeGameMode()" style="flex: 2">{{ translationsContainer.get('numberOfVirtualPlayers') }}</h4>
+            <h4 style="flex: 2">{{ translationsContainer.get('numberOfObservers') }}</h4>
+            <h4 style="flex: 2" id="spacer"></h4>
+            <h4 style="flex: 2" id="spacer"></h4>
+        </div>
+        <div id="game-list">
+            <span class="lobby-line" *ngFor="let lobby of lobbies">
+                <app-lobby-classic-item
+                    class="gameItem"
+                    [lobby]="lobby"
+                    (newWaitingEvent)="openWaitingOverlay($event)"
+                    (newPasswordEvent)="openPasswordOverlay($event)"
+                    [gameMode]="gameMode"
+                ></app-lobby-classic-item>
+            </span>
+            <span *ngFor="let game of games">
+                <app-lobby-classic-item
+                    class="gameItem"
+                    [lobby]="game"
+                    (newPasswordEvent)="openPasswordOverlay($event)"
+                    [gameMode]="gameMode"
+                ></app-lobby-classic-item>
+            </span>
+        </div>
+    </div>
+</div>
+<div *ngIf="isWaiting || isRejected || needPassword" id="screen">
+    <div id="container">
+        <div *ngIf="isWaiting">
+            <p>{{ translationsContainer.get('waitingForCreatorApprobation') }}</p>
+            <button (click)="cancelJoinRequest()" type="button">{{ translationsContainer.get('cancel') }}</button>
+        </div>
+        <div *ngIf="isRejected">
+            <p>{{ translationsContainer.get('youWereRejected') }}</p>
+            <button (click)="closeRejectionOverlay()" type="button">{{ translationsContainer.get('ok') }}</button>
+        </div>
+        <div *ngIf="needPassword" class="needPassword">
+            <div *ngIf="!passwordValid" class="passwordErrors">{{ translationsContainer.get('invaldiPasswordNewGame') }}</div>
+            <p>{{ translationsContainer.get('enterPasswordNewGame') }}</p>
+            <div><input type="password" [formControl]="password" /></div>
+            <div *ngIf="password.errors" class="passwordErrors">{{ translationsContainer.get('emptyField') }}</div>
+            <button (click)="closePasswordOverlay()" type="button" class="cancelPassword">{{ translationsContainer.get('cancel') }}</button>
+            <button (click)="validatePassword()" type="button" [disabled]="!password.valid" class="validatePassword">
+                {{ translationsContainer.get('goToGame') }}
+            </button>
+        </div>
+    </div>
+</div>
+<button class="returnButton" (click)="leave()" routerLink="/home">← {{ translationsContainer.get('return') }}</button>
+<button class="newGameButton" routerLink="/createNewGame">
+    {{ isTournamentMode() ? translationsContainer.get('createTournament') : translationsContainer.get('createNewGame') }}
+</button>

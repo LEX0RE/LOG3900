@@ -1,0 +1,16 @@
+section {
+    border: 0.2rem solid;
+    border-radius: 2vh;
+    display: flex;
+    gap: 0vh 0vh;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+}
+
+app-output-box {
+    background-color: var(--chat-background-color);
+    opacity: 0.92;
+    overflow: hidden;
+    height: 100%;
+}

@@ -1,0 +1,11 @@
+<div id="tree-container">
+    <div *ngIf="brackets.length > 0" id="default-bracket">
+        <app-bracket-node [node]="leftSide()" [reverse]="false" [fillRemaining]="true"></app-bracket-node>
+        <app-bracket-line [reverse]="false"></app-bracket-line>
+        <app-bracket-node [node]="rightSide()" [reverse]="true" [fillRemaining]="true"></app-bracket-node>
+    </div>
+    <div *ngIf="brackets.length > 1" id="consolation">
+        <p>{{translationsContainer.get('thirdPlaceMatch')}}</p>
+        <app-bracket-node [node]="brackets[1]" [reverse]="false" [fillRemaining]="false"></app-bracket-node>
+    </div>
+</div>

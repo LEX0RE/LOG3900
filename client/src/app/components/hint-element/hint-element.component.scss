@@ -1,0 +1,27 @@
+.hint {
+    font-weight: normal;
+    font-size: 1.8vh;
+}
+
+div {
+    background-color: var(--clearer-button-color);
+    border: 0.5vh solid var(--button-border);
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    margin-bottom: 1vh;
+    align-items: center;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+div:hover {
+    background-color: var(--clearer-button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.isSelected {
+    background-color: var(--clearer-button-hover-color);
+}

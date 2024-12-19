@@ -1,0 +1,32 @@
+h1 {
+    align-items: center;
+    text-align: center;
+    color: var(--title-color);
+    font-weight: bold;
+    font-family: var(--title-font);
+    margin-top: 1vh;
+    text-shadow: 0px -1px var(--shadow-color), 1px 0px var(--shadow-color), 0px 1px var(--shadow-color), -1px 0px var(--shadow-color);
+    font-size: 10vh;
+    margin-bottom: 3vh;
+}
+
+button {
+    position: absolute;
+    bottom: 15vh;
+    left: 5vh;
+    border-radius: 2.2vh;
+    background-color: var(--quit-button-color);
+    color: var(--button-font-color);
+    font-size: 3vh;
+    width: 20vh;
+    height: 5vh;
+    text-align: center;
+    padding: 0vh;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--quit-button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}

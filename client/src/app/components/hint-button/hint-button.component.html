@@ -1,0 +1,19 @@
+<div *ngIf="gameUpdate.playerInfo.turn">
+    <img *ngIf="!isTouched" src="assets/images/bulb_off.png" class="bulb bulb-enabled" (mouseenter)="isTouched = true" />
+    <div *ngIf="isTouched">
+        <p>{{ translationsContainer.get('hint') }}</p>
+        <img src="assets/images/bulb_on.png" class="bulb bulb-enabled" (mouseleave)="isTouched = false" (click)="sendHint()" />
+    </div>
+</div>
+
+<img *ngIf="!gameUpdate.playerInfo.turn" src="assets/images/bulb_off.png" class="bulb" id="bulb-disabled" />
+<div *ngIf="canOpenHintSection() && gameUpdate.playerInfo.turn" class="hints-section">
+    <h4>{{ hintBoxMessage }}</h4>
+    <app-hint-element
+        *ngFor="let hint of hints; index as i"
+        class="hint-element"
+        [hint]="hint.wordHint"
+        [isSelected]="isSelectedHint(i)"
+        (click)="selectHint(i)"
+    ></app-hint-element>
+</div>

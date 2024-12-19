@@ -1,0 +1,13 @@
+export const TOO_LONG = 'Le message est trop long. Veuillez entrer un message faisant moins de 512 caractères.';
+export const PARAMETERS_INVALID = 'Les paramètres ne sont pas valides.';
+export const WRONG_TURN = "Ce n'est pas votre tour.";
+export const EMPTY_COMMAND = 'La commande est vide.';
+export const STASH_COMMAND = 'Réserve:\n';
+export const HINT_COMMAND = 'Voici 5 possibilités de lettres à placer:';
+export const WARN_HINT = "Le système n'a pu trouver que ces solutions:";
+export const NO_HINT = "Il n'y a aucune possibilité de placement avec vos lettres";
+export const HELP_COMMAND = 'Voici les commandes que vous pouvez utiliser:';
+export const SKIP_TURN = 'Vous passez votre tour.';
+export const HINT_MESSAGE = "Recherche d'indice en cours...";
+export const HINT_RESEARCH = 'Le système continue encore à chercher des indices.';
+export const MESSAGE_NOT_SEND = "Votre message n'a pas pu être envoyé";

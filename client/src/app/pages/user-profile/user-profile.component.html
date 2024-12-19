@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<h1>{{ translationsContainer.get('profile') }}</h1>
+
+<div class="verticalContainer" id="vertical-wrapper">
+    <p *ngIf="registerForm.controls['userName'].errors" class="userNameError">
+        {{ translationsContainer.get('writePlayerNameHint1') }} {{ minCharactersUserName }} {{ translationsContainer.get('and') }}
+        {{ maxCharactersUserName }} {{ translationsContainer.get('writePlayerNameHint2') }}
+    </p>
+    <p class="userNameError" p>{{ profileUpdaterManager.error }}</p>
+    <app-avatar *ngIf="statusAvatarOverlay()" (closing)="submitImage($event)"></app-avatar>
+    <div id="form-big-row">
+        <div class="left-column">
+            <app-theme-picker></app-theme-picker>
+            <app-language-picker></app-language-picker>
+        </div>
+        <div class="avatar">
+            <img src="{{ authenticationService.chosenAvatar }}" alt="avatar" class="avatarImg" />
+            <div class="editingBorder">
+                <button class="selectAvatar" (click)="openAvatarOverlay()"><i class="far fa-edit"></i></button>
+            </div>
+        </div>
+        <div class="verticalContainer">
+            <form [formGroup]="registerForm" class="verticalContainer">
+                <div class="horizontal-container" class="form-row">
+                    <label for="username-input">{{ translationsContainer.get('yourPlayerName') }} :</label>
+                    <input id="username-input" type="text" formControlName="userName" (change)="submitUsername()" />
+                </div>
+                <div class="horizontal-container" class="form-row">
+                    <label for="email-input">{{ translationsContainer.get('yourEmail') }} :</label>
+                    <input id="email-input" type="email" formControlName="email" (change)="submitEmail()" readonly />
+                </div>
+                <div class="horizontal-container" class="form-row">
+                    <label for="password-input">{{ translationsContainer.get('yourPassword') }} :</label>
+                    <input id="password-input" type="password" type="password" formControlName="password" (change)="submitPassword()" readonly />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="horizontal-container">
+        <button id="history-button" routerLink="/statistic">{{ translationsContainer.get('statistics') }}</button>
+        <button id="statistic-button" routerLink="/history">{{ translationsContainer.get('history') }}</button>
+        <button id="friends-button" routerLink="/social">{{ translationsContainer.get('seeYourFriends') }}</button>
+    </div>
+</div>
+
+<button class="returnButton" routerLink="/home">← {{ translationsContainer.get('return') }}</button>

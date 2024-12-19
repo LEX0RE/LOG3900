@@ -1,0 +1,70 @@
+{
+    "version": "1.0.0",
+    "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true
+    },
+    "tasks": [
+        {
+            "label": "Create terminals",
+            "dependsOn": ["Client Léger", "Client Lourd", "Server"],
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "Client Lourd",
+            "type": "shell",
+            "command": "",
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": []
+                },
+                "cwd": "${workspaceFolder}/client"
+            },
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Client Léger",
+            "type": "shell",
+            "command": "",
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": []
+                },
+                "cwd": "${workspaceFolder}/mobile"
+            },
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Server",
+            "type": "shell",
+            "command": "",
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": []
+                },
+                "cwd": "${workspaceFolder}/server"
+            },
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "panel": "dedicated"
+            }
+        }
+    ]
+}

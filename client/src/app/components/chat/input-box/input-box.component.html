@@ -1,0 +1,25 @@
+<section class="inputBox">
+    <input
+        autofocus
+        maxlength="512"
+        type="text"
+        [(ngModel)]="textToSend"
+        (keyup.enter)="onEnter($event)"
+        [placeholder]="translationsContainer.get('typeAMessage')"
+        *ngIf="chatBoxInteractionService.isMessageChat"
+    />
+    <div class="sendingButtonContainer" (click)="onEnter($event)" *ngIf="chatBoxInteractionService.isMessageChat">
+        <i class="fa fa-angle-right"></i>
+    </div>
+    <div class="searchChannel" *ngIf="!chatBoxInteractionService.isMessageChat">
+        <input
+            (ngModelChange)="searchChannel($event)"
+            autofocus
+            maxlength="512"
+            type="text"
+            [(ngModel)]="textToSearch"
+            (keyup.enter)="onEnter($event)"
+            [placeholder]="translationsContainer.get('searchChannel')"
+        />
+    </div>
+</section>

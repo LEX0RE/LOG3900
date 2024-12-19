@@ -1,0 +1,48 @@
+<h1>{{ translationsContainer.get('history') }}</h1>
+
+<div class="horizontalContainer">
+    <div class="verticalContainer table-container">
+        <div class="table">
+            <div class="primary-header">
+                <h3>{{ translationsContainer.get('connectionSummary') }}</h3>
+            </div>
+            <div class="secondary-header" class="horizontalContainer">
+                <h4 style="flex: 3">{{ translationsContainer.get('action') }}</h4>
+                <h4 style="flex: 6">{{ translationsContainer.get('date') }}</h4>
+                <h4 style="flex: 3">{{ translationsContainer.get('time') }}</h4>
+                <h4 style="flex: 1" id="spacer"></h4>
+            </div>
+            <div id="item-list">
+                <div *ngFor="let connectionInfo of connectionsInfo">
+                    <div class="item">
+                        <app-connection-info-item [connection]="connectionInfo"></app-connection-info-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="verticalContainer table-container">
+        <div class="table">
+            <div class="primary-header">
+                <h3>{{ translationsContainer.get('gameHistorySummary') }}</h3>
+            </div>
+            <div class="secondary-header" class="horizontalContainer">
+                <h4>{{ translationsContainer.get('date') }}</h4>
+                <h4>{{ translationsContainer.get('time') }}</h4>
+                <h4>{{ translationsContainer.get('result') }}</h4>
+                <h4>{{ translationsContainer.get('replay') }}</h4>
+                <h4 style="flex: 0.1"></h4>
+            </div>
+            <div id="item-list">
+                <div *ngFor="let history of histories; let i = index">
+                    <div class="item">
+                        <app-history-item [history]="history" [index]="i"></app-history-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="returnButton" routerLink="/profile">← {{ translationsContainer.get('return') }}</button>

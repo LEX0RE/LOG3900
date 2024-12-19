@@ -1,0 +1,17 @@
+<div id="align-container">
+    <div id="node-container">
+        <div id="current-node" [style.flex-direction]="reverse ? 'row' : 'row-reverse'">
+            <div *ngFor="let user of fill(); index as i">
+                <p *ngIf="i > 0">{{ translationsContainer.get('vs') }}</p>
+                <app-bracket-player [user]="user"></app-bracket-player>
+            </div>
+            <button *ngIf="node.isMatchInProgress" (click)="observeGame()">{{ translationsContainer.get('observe') }}</button>
+        </div>
+        <app-bracket-line *ngIf="node.children.length" [reverse]="reverse"></app-bracket-line>
+        <div id="children-node" *ngIf="node.children.length">
+            <div id="child-node" *ngFor="let child of node.children">
+                <app-bracket-node [node]="child" [reverse]="reverse" [fillRemaining]="fillRemaining"></app-bracket-node>
+            </div>
+        </div>
+    </div>
+</div>

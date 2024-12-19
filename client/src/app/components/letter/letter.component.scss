@@ -1,0 +1,32 @@
+#tile {
+    background-color: var(--tile-color);
+    border: 0.1vh solid var(--tile-border);
+    border-radius: 1vh;
+    padding: 1vh;
+    justify-items: center;
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#letter {
+    color: var(--tile-font-color);
+    margin-left: 0vh;
+    margin-bottom: 0vh;
+}
+
+#point {
+    margin-top: 3vh;
+    margin-left: 0.3vh;
+    vertical-align: text-bottom;
+    color: var(--tile-font-color);
+}

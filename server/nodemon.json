@@ -1,0 +1,6 @@
+{
+    "watch": ["app"],
+    "ext": "ts",
+    "ignore": ["app/**/*.spec.ts", "../common/**/*.ts"],
+    "exec": "npm run build && node --expose-gc --inspect out/server/app/index.js"
+}

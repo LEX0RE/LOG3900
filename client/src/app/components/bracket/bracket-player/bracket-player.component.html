@@ -1,0 +1,11 @@
+<div id="player-container">
+    <div id="bracket-player" [class.self]="isSelf()">
+        <img class="avatarOthers" *ngIf="picture()" src="{{ picture() }}" alt="profile-picture" />
+        <p>{{ user.name }}</p>
+    </div>
+    <div id="mdiv" *ngIf="isEliminated()">
+        <div class="mdiv">
+            <div class="md"></div>
+        </div>
+    </div>
+</div>

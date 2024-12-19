@@ -1,0 +1,127 @@
+#screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.8vh;
+    margin-bottom: 4vh;
+    font-family: Inknut Antiqua;
+    font-style: bold;
+    font-size: 6vh;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: var(--title-color);
+    text-shadow: 0vh -0.01vh var(--shadow-color), 0.01vh 0vh var(--shadow-color), 0vh 0.01vh var(--shadow-color), -0.01vh 0vh var(--shadow-color);
+}
+
+.verticalContainer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.horizontalContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay {
+    z-index: 11;
+    border-radius: 2vh;
+    position: absolute;
+}
+
+#point-of-view {
+    border: 0.5vh solid var(--button-border);
+    background-color: var(--background-color);
+    padding-left: 1vh;
+    padding-right: 1vh;
+    width: 70vh;
+    height: 10vh;
+    top: 0.5vh;
+    bottom: 0;
+    left: 48vh;
+    right: 0;
+}
+
+#timeline-line {
+    height: 100%;
+    width: 100%;
+}
+
+#timeline {
+    margin-top: 1vh;
+    height: 3vh;
+}
+
+#leave-button {
+    width: 25vh;
+    height: 25vh;
+    top: 88vh;
+    bottom: 12vh;
+    left: 10vh;
+    right: 10vh;
+}
+
+#returnButton {
+    font-size: 3.2vh;
+
+    width: 23vh;
+    height: 7.5vh;
+    margin-right: 150vh;
+    margin-top: -6.5vh;
+    font-size: 2.9vh;
+}
+
+.point-of-view-button {
+    width: 15vh;
+    height: 3vh;
+    padding: 0.1vh 0.1vh 0.1vh 0.1vh;
+    font-size: medium;
+}
+
+.plus-minus-button {
+    width: 3vh;
+    height: 3vh;
+    padding: 0.1vh 0.1vh 0.1vh 0.1vh;
+    margin-top: 1vh;
+    font-size: medium;
+}
+
+button {
+    margin-top: 20px;
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+    border-radius: 10px;
+    border: 3px solid var(--button-border);
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+button:disabled,
+button[disabled] {
+    border-color: var(--button-disabled-border-color);
+    background-color: var(--button-disabled-color);
+    color: var(--button-disabled-font-color);
+    cursor: default;
+}

@@ -1,0 +1,27 @@
+<div id="informativePanel">
+    <span *ngFor="let opponent of opponents">
+        <app-player-information [player]="opponent" [isObservationPage]="isObservationPage"></app-player-information>
+    </span>
+
+    <div>
+        <div class="space"></div>
+        <div id="division">
+            <div *ngIf="!isCooperativeGame" style="flex: 1; align-items: center; display: flex; justify-content: center">
+                <p *ngIf="!isReplay" class="timer">{{ timer }}</p>
+                <img *ngIf="!isReplay" src="assets/images/clock.png" alt="clock" class="timer-img" style="z-index: -6" />
+            </div>
+            <div style="display: flex">
+                <img style="flex: 1; max-width: 34%" src="assets/images/bag.png" alt="bag" />
+
+                <div class="remainingLetter">
+                    {{ remainingLetter }} {{ ' ' }}
+                    {{ remainingLetter > 1 ? translationsContainer.get('letters') : translationsContainer.get('letter') }}
+                </div>
+            </div>
+        </div>
+
+        <div class="space"></div>
+    </div>
+
+    <app-player-information [player]="player" [isObservationPage]="isObservationPage"></app-player-information>
+</div>
